@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LE65QSJJ8H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LE65QSJJ8H');
+</script>
+<title>神戸バンブー代行｜中国輸入 受注管理システム</title>
+<meta name="description" content="中国輸入の無在庫・有在庫を、発注後は画面を見るだけに。神戸バンブー代行の新・受注管理システム。">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#14235E;
+    --navy-deep:#0B1538;
+    --navy-soft:#1C2E72;
+    --orange:#F0640A;
+    --orange-bright:#FF7E25;
+    --paper:#F3F6FB;
+    --ink:#101736;
+    --mist:#5B668C;
+    --white:#FFFFFF;
+    --line-d:rgba(255,255,255,.14);
+    --line-l:rgba(16,23,54,.10);
+    --maxw:1120px;
+    --display:'Noto Sans JP',system-ui,sans-serif;
+    --latin:'Anton',sans-serif;
+    --body:'Noto Sans JP',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--body);
+    color:var(--ink);
+    background:var(--navy-deep);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+  /* ---------- eyebrow / latin labels ---------- */
+  .eyebrow{
+    font-family:var(--latin);
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    font-size:13px;
+    color:var(--orange);
+    display:inline-flex;align-items:center;gap:10px;
+  }
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--orange);display:inline-block}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(11,21,56,.82);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line-d);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .nav .logo img{height:38px;width:auto}
+  .nav-links{display:flex;gap:22px;align-items:center}
+  .nav-links a{color:rgba(255,255,255,.78);font-size:14px;font-weight:500;transition:color .2s}
+  .nav-links a:hover{color:#fff}
+  .btn{
+    font-family:var(--body);font-weight:700;font-size:14px;
+    background:var(--orange);color:#fff;
+    padding:12px 22px;border-radius:999px;
+    display:inline-flex;align-items:center;gap:8px;
+    transition:transform .15s ease, box-shadow .2s ease, background .2s;
+    box-shadow:0 6px 20px rgba(240,100,10,.32);
+    border:none;cursor:pointer;
+  }
+  .btn:hover{background:var(--orange-bright);transform:translateY(-2px);box-shadow:0 10px 28px rgba(240,100,10,.42)}
+  .btn.ghost{background:transparent;color:#fff;border:1.5px solid var(--line-d);box-shadow:none}
+  .btn.ghost:hover{border-color:#fff;transform:translateY(-2px)}
+  .nav .btn{padding:10px 20px}
+
+  /* hamburger + mobile menu */
+  .nav-toggle{
+    display:none;width:44px;height:44px;border:none;background:transparent;cursor:pointer;
+    flex-direction:column;justify-content:center;align-items:center;gap:5px;margin-left:4px;
+  }
+  .nav-toggle span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:transform .3s ease, opacity .2s ease}
+  .nav-toggle.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav-toggle.active span:nth-child(2){opacity:0}
+  .nav-toggle.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .mobile-menu{
+    position:fixed;top:68px;left:0;right:0;bottom:0;z-index:90;
+    background:linear-gradient(180deg,var(--navy-deep),var(--navy));
+    display:flex;flex-direction:column;justify-content:center;
+    padding:24px 32px 40px;overflow-y:auto;
+    opacity:0;visibility:hidden;transform:translateY(-6px);
+    transition:opacity .3s ease, visibility .3s ease, transform .3s ease;
+  }
+  .mobile-menu.open{opacity:1;visibility:visible;transform:none}
+  .mobile-menu a:not(.btn){
+    color:#fff;font-size:19px;font-weight:700;padding:15px 4px;
+    border-bottom:1px solid var(--line-d);display:flex;align-items:center;justify-content:space-between;
+  }
+  .mobile-menu a:not(.btn)::after{content:"\203A";color:var(--orange);font-size:22px}
+  .mobile-menu a.btn{margin-top:26px;justify-content:center;font-size:16px;padding:16px}
+  @media(max-width:1100px){.nav-links{display:none}.nav-toggle{display:flex}}
+  @media(min-width:1101px){.mobile-menu{display:none}}
+  @media(prefers-reduced-motion:reduce){.nav-toggle span,.mobile-menu{transition:none}}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;
+    background:
+      radial-gradient(900px 500px at 78% -10%, rgba(240,100,10,.20), transparent 60%),
+      radial-gradient(700px 600px at 0% 110%, rgba(28,46,114,.85), transparent 60%),
+      linear-gradient(180deg,var(--navy-deep),var(--navy));
+    color:#fff;
+    padding:84px 0 96px;
+    overflow:hidden;
+  }
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
+  @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:40px}}
+  .hero h1{
+    font-family:var(--display);font-weight:900;
+    font-size:clamp(38px,6.2vw,68px);
+    line-height:1.08;letter-spacing:.01em;margin:22px 0 0;
+  }
+  .hero h1 .hl{color:var(--orange);position:relative;white-space:nowrap}
+  .hero h1 .hl::after{
+    content:"";position:absolute;left:-2%;right:-2%;bottom:.06em;height:.34em;
+    background:rgba(240,100,10,.22);z-index:-1;border-radius:4px;
+  }
+  .hero p.lead{
+    margin-top:24px;font-size:clamp(15px,1.7vw,18px);
+    color:rgba(255,255,255,.82);max-width:30em;font-weight:500;
+  }
+  .hero-cta{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+  .hero-note{margin-top:18px;font-size:13px;color:rgba(255,255,255,.55)}
+
+  /* hero shot placeholder */
+  .shot{
+    border-radius:16px;overflow:hidden;
+    border:1px solid var(--line-d);
+    background:linear-gradient(160deg,#1a2a66,#0e1944);
+    box-shadow:0 30px 70px rgba(0,0,0,.45);
+  }
+  .shot-ph{
+    aspect-ratio:16/10;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;gap:10px;text-align:center;
+    padding:24px;color:rgba(255,255,255,.6);
+    background:
+      repeating-linear-gradient(45deg,rgba(255,255,255,.025) 0 12px,transparent 12px 24px);
+  }
+  .shot-ph .tag{
+    font-family:var(--latin);font-size:12px;letter-spacing:.12em;
+    color:var(--orange);border:1px solid rgba(240,100,10,.5);
+    padding:5px 12px;border-radius:999px;
+  }
+  .shot-ph .txt{font-size:13px;line-height:1.6;max-width:24em}
+  .shot-ph .dim{font-size:11px;color:rgba(255,255,255,.4)}
+  .shot-img{width:100%;display:block;aspect-ratio:16/10;object-fit:cover;object-position:top center}
+
+  /* hero stats */
+  .hero-stats{display:flex;flex-direction:column;gap:18px}
+  .hstat{
+    background:rgba(255,255,255,.05);border:1px solid var(--line-d);border-radius:16px;
+    padding:24px 28px;display:flex;align-items:baseline;gap:18px;
+    backdrop-filter:blur(4px);
+  }
+  .hstat .hnum{
+    font-family:var(--latin);color:var(--orange);line-height:1;
+    font-size:clamp(38px,6vw,56px);letter-spacing:.01em;white-space:nowrap;
+  }
+  .hstat .hnum .u{font-size:.42em;color:#fff;margin-left:4px;letter-spacing:.02em}
+  .hstat .hlabel{color:rgba(255,255,255,.82);font-size:14px;font-weight:700;line-height:1.5}
+  @media(max-width:900px){.hstat{padding:20px 22px}}
+
+  /* ---------- visibility block (signature) ---------- */
+  .vis{margin-top:54px;border-top:1px solid var(--line-d);padding-top:34px}
+  .vis-head{
+    font-family:var(--display);font-weight:900;
+    font-size:clamp(20px,2.6vw,28px);line-height:1.3;color:#fff;margin-bottom:24px;
+  }
+  .vis-head .hl{color:var(--orange)}
+  .vis-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  @media(max-width:760px){.vis-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:460px){.vis-grid{grid-template-columns:1fr}}
+  .vis-item{
+    display:flex;gap:12px;align-items:flex-start;
+    background:rgba(255,255,255,.04);border:1px solid var(--line-d);
+    border-radius:10px;padding:15px 16px;transition:background .2s,border-color .2s;
+  }
+  .vis-item:hover{background:rgba(255,255,255,.07);border-color:rgba(240,100,10,.4)}
+  .vis-item .vk{
+    flex-shrink:0;width:20px;height:20px;border-radius:50%;background:var(--orange);
+    display:flex;align-items:center;justify-content:center;margin-top:1px;
+  }
+  .vis-item .vk::before{content:"✓";color:#fff;font-size:12px;font-weight:900;line-height:1}
+  .vis-item b{display:block;font-size:14.5px;color:#fff;font-weight:700;line-height:1.45}
+  .vis-item small{display:block;font-size:12px;color:rgba(255,255,255,.6);margin-top:3px;line-height:1.55}
+
+  /* ---------- section base ---------- */
+  section{padding:96px 0}
+  .sec-light{background:var(--paper);color:var(--ink)}
+  .sec-white{background:#fff;color:var(--ink)}
+  .sec-navy{background:var(--navy);color:#fff}
+  .sec-deep{background:var(--navy-deep);color:#fff}
+  .sec-head{max-width:38em}
+  .sec-head h2{
+    font-family:var(--display);font-weight:900;
+    font-size:clamp(26px,3.6vw,42px);line-height:1.2;margin:16px 0 0;letter-spacing:.01em;
+  }
+  .sec-head p{margin-top:16px;font-size:16px;color:var(--mist)}
+  .sec-navy .sec-head p,.sec-deep .sec-head p{color:rgba(255,255,255,.72)}
+
+  /* ---------- pain cards ---------- */
+  .pain-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+  @media(max-width:900px){.pain-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.pain-grid{grid-template-columns:1fr}}
+  .pain{
+    background:#fff;border:1px solid var(--line-l);border-radius:14px;padding:26px 22px;
+    position:relative;transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .pain:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(16,23,54,.10)}
+  .pain .n{font-family:var(--latin);font-size:30px;color:rgba(16,23,54,.12);line-height:1}
+  .pain h3{font-size:17px;font-weight:900;margin:12px 0 8px;color:var(--ink)}
+  .pain p{font-size:13.5px;color:var(--mist);line-height:1.7}
+
+  /* ---------- transition band ---------- */
+  .turn{text-align:center;padding:110px 0}
+  .turn .eyebrow{justify-content:center}
+  .turn h2{
+    font-family:var(--display);font-weight:900;
+    font-size:clamp(30px,5vw,56px);line-height:1.15;margin-top:20px;
+  }
+  .turn h2 .hl{color:var(--orange)}
+  .turn p{margin:22px auto 0;max-width:34em;color:rgba(255,255,255,.78);font-size:16px}
+
+  /* ---------- status chips ---------- */
+  .chip{
+    display:inline-flex;align-items:center;gap:6px;
+    font-size:11.5px;font-weight:700;padding:4px 11px;border-radius:999px;letter-spacing:.02em;
+    white-space:nowrap;
+  }
+  .chip.live{background:var(--orange);color:#fff}
+  .chip.soon{background:transparent;color:var(--orange);border:1.4px solid rgba(240,100,10,.6)}
+  .chip.plan{background:transparent;color:var(--mist);border:1.4px solid var(--line-l)}
+  .sec-navy .chip.plan,.sec-deep .chip.plan{color:rgba(255,255,255,.6);border-color:var(--line-d)}
+  .chip .led{width:6px;height:6px;border-radius:50%;background:currentColor}
+
+  /* ---------- flagship clusters ---------- */
+  .cluster{margin-top:54px;display:grid;grid-template-columns:300px 1fr;gap:40px;align-items:start}
+  .cluster + .cluster{margin-top:40px;padding-top:40px;border-top:1px solid var(--line-l)}
+  @media(max-width:840px){.cluster{grid-template-columns:1fr;gap:22px}}
+  .cluster-aside .knum{font-family:var(--latin);font-size:15px;color:var(--orange);letter-spacing:.1em}
+  .cluster-aside h3{font-family:var(--display);font-weight:900;font-size:24px;margin:8px 0 10px;line-height:1.25;color:var(--ink)}
+  .cluster-aside p{font-size:14px;color:var(--mist)}
+  .feat-list{display:flex;flex-direction:column;gap:14px}
+  .feat{
+    display:flex;gap:16px;align-items:flex-start;
+    background:var(--paper);border:1px solid var(--line-l);
+    border-radius:12px;padding:18px 20px;transition:background .2s, transform .18s ease, box-shadow .2s ease, border-color .2s;
+  }
+  .feat:hover{background:#fff;transform:translateY(-3px);box-shadow:0 14px 32px rgba(16,23,54,.09);border-color:rgba(240,100,10,.45)}
+  .feat-body{flex:1}
+  .feat-body .ttl{font-weight:700;font-size:15.5px;color:var(--ink);margin-bottom:4px}
+  .feat-body .desc{font-size:13.5px;color:var(--mist);line-height:1.65}
+  .feat-status{flex-shrink:0;padding-top:2px}
+  @media(max-width:520px){.feat{flex-direction:column;gap:10px}}
+
+  /* ---------- improvement (self-serve + visibility) ---------- */
+  .imp-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  .imp-allnow{
+    display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--orange);
+    border:1.4px solid rgba(240,100,10,.4);border-radius:999px;padding:8px 16px;background:rgba(240,100,10,.06);
+  }
+  .imp-cols{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:46px}
+  @media(max-width:820px){.imp-cols{grid-template-columns:1fr;gap:20px}}
+  .imp-card{background:#fff;border:1px solid var(--line-l);border-radius:16px;padding:30px 28px}
+  .imp-card .cap{
+    font-family:var(--latin);font-size:13px;letter-spacing:.1em;color:var(--orange);
+  }
+  .imp-card h3{font-size:20px;font-weight:900;margin:6px 0 4px;color:var(--ink)}
+  .imp-card .sub{font-size:13px;color:var(--mist);margin-bottom:18px}
+  .imp-row{
+    display:flex;gap:14px;align-items:baseline;padding:13px 0;border-top:1px solid var(--line-l);
+  }
+  .imp-row .was{font-size:12px;color:var(--mist);flex-shrink:0;width:96px}
+  .imp-row .now{font-size:14px;font-weight:700;color:var(--ink);line-height:1.5}
+  .imp-row .now small{display:block;font-weight:400;font-size:12px;color:var(--mist);margin-top:2px}
+
+  /* ---------- pricing ---------- */
+  .guarantee{
+    display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;
+    margin:34px auto 0;padding:16px 24px;border-radius:14px;max-width:640px;
+    background:rgba(240,100,10,.10);border:1px solid rgba(240,100,10,.45);
+    color:#fff;font-size:14.5px;font-weight:500;text-align:center;
+  }
+  .guarantee b{font-family:var(--latin);letter-spacing:.06em;font-size:18px;color:var(--orange)}
+  .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:34px}
+  @media(max-width:760px){.price-grid{grid-template-columns:1fr;gap:28px}}
+  .pcard{
+    background:#fff;color:var(--ink);border-radius:18px;padding:34px 28px;
+    border:1px solid var(--line-l);display:flex;flex-direction:column;position:relative;
+  }
+  .pcard.featured{border:2px solid var(--orange);box-shadow:0 26px 60px rgba(0,0,0,.34)}
+  .pbadge{
+    position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+    background:var(--orange);color:#fff;font-size:12px;font-weight:700;
+    padding:6px 18px;border-radius:999px;white-space:nowrap;box-shadow:0 6px 16px rgba(240,100,10,.4);
+  }
+  .pname{font-size:15px;font-weight:700;color:var(--mist)}
+  .pprice{font-family:var(--latin);font-size:46px;color:var(--ink);line-height:1;margin:10px 0 0;letter-spacing:.01em}
+  .pprice .unit{font-family:var(--body);font-size:15px;color:var(--mist);font-weight:500;margin-left:6px}
+  .pfee{margin:22px 0;padding:16px;border-radius:12px;background:var(--paper);text-align:center}
+  .pfee .l{font-size:12px;color:var(--mist);display:block;margin-bottom:2px}
+  .pfee .v{font-family:var(--latin);font-size:32px;color:var(--orange);line-height:1.1}
+  .pfee .v small{font-family:var(--body);font-size:14px;color:var(--ink);font-weight:700}
+  .pinc{list-style:none;display:flex;flex-direction:column;gap:9px;margin:0 0 22px}
+  .pinc li{display:flex;gap:9px;align-items:flex-start;font-size:13.5px;color:var(--ink)}
+  .pinc li::before{content:"\2713";color:var(--orange);font-weight:900;flex-shrink:0}
+  .pship{border-top:1px solid var(--line-l);padding-top:18px;margin-bottom:26px}
+  .pship .pshead{font-size:12px;color:var(--mist);margin-bottom:10px;font-weight:700;letter-spacing:.03em}
+  .pship .prow{display:flex;justify-content:space-between;gap:12px;font-size:13px;padding:5px 0;align-items:baseline}
+  .pship .prow b{color:var(--ink);font-weight:700;flex-shrink:0}
+  .pship .prow span{color:var(--mist);text-align:right}
+  .pcard .btn{margin-top:auto;justify-content:center;width:100%}
+  .pcard.free .btn{background:transparent;color:var(--orange);border:1.5px solid rgba(240,100,10,.5);box-shadow:none}
+  .pcard.free .btn:hover{background:rgba(240,100,10,.08)}
+  .pbreak{
+    margin:18px 0 4px;padding:12px 14px;border-radius:10px;
+    background:rgba(240,100,10,.10);border:1px solid rgba(240,100,10,.4);
+    color:var(--ink);font-size:13.5px;font-weight:700;text-align:center;line-height:1.5;
+  }
+  .pbreak b{font-family:var(--latin);color:var(--orange);font-size:23px;letter-spacing:.02em;margin:0 3px;vertical-align:-1px}
+  .bsub{font-size:11px;color:var(--mist);text-align:center;margin-bottom:6px;line-height:1.55}
+  .price-note{margin-top:28px;font-size:12.5px;color:rgba(255,255,255,.55);line-height:1.85;text-align:center}
+
+  /* pricing accordion */
+  .acc{margin-top:22px}
+  .acc details{border:1px solid var(--line-d);border-radius:12px;background:rgba(255,255,255,.03);margin-bottom:12px;overflow:hidden}
+  .acc summary{list-style:none;cursor:pointer;padding:17px 20px;font-weight:700;font-size:14.5px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .acc summary::-webkit-details-marker{display:none}
+  .acc summary .chev{color:var(--orange);font-size:20px;line-height:1;transition:transform .25s ease}
+  .acc details[open] summary .chev{transform:rotate(90deg)}
+  .acc .acc-body{padding:2px 20px 18px}
+  .prow2{padding:12px 0;border-top:1px solid var(--line-d)}
+  .prow2:first-child{border-top:none}
+  .pr-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px}
+  .pr-head b{font-size:14px;color:#fff;font-weight:700}
+  .pr-fee{font-family:var(--latin);font-size:15px;color:var(--orange);white-space:nowrap;letter-spacing:.02em;flex-shrink:0}
+  .pr-desc{font-size:12.5px;color:rgba(255,255,255,.62);line-height:1.6;margin-top:4px}
+  .acc-note{font-size:12px;color:rgba(255,255,255,.5);margin-top:14px;text-align:center}
+  @media(prefers-reduced-motion:reduce){.acc summary .chev{transition:none}}
+
+  /* ---------- lead time / timeline ---------- */
+  .lt-top{display:flex;flex-wrap:wrap;gap:18px;margin-top:44px}
+  .lt-stat{
+    flex:1;min-width:220px;background:#fff;border:1px solid var(--line-l);border-radius:14px;
+    padding:24px 26px;display:flex;flex-direction:column;gap:4px;
+  }
+  .lt-stat .lt-l{font-size:13px;color:var(--mist);font-weight:700}
+  .lt-stat .lt-v{font-family:var(--display);font-weight:900;font-size:clamp(22px,3vw,30px);color:var(--ink);line-height:1.25}
+  .lt-stat .lt-v em{color:var(--orange);font-style:normal}
+  .lt-stat.accent{background:linear-gradient(160deg,#14235E,#0d1944);border-color:transparent}
+  .lt-stat.accent .lt-l{color:rgba(255,255,255,.7)}
+  .lt-stat.accent .lt-v{color:#fff}
+
+  .timeline{margin-top:34px;display:grid;grid-template-columns:repeat(5,1fr);gap:16px;position:relative}
+  @media(max-width:860px){.timeline{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:480px){.timeline{grid-template-columns:1fr}}
+  .tstep{
+    background:#fff;border:1px solid var(--line-l);border-radius:14px;padding:20px 18px;
+    position:relative;transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .tstep:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(16,23,54,.10)}
+  .tstep .tday{
+    font-family:var(--latin);font-size:13px;letter-spacing:.06em;color:#fff;background:var(--orange);
+    display:inline-block;padding:3px 12px;border-radius:999px;margin-bottom:12px;
+  }
+  .tstep h3{font-size:15px;font-weight:900;color:var(--ink);margin:0 0 6px;line-height:1.4}
+  .tstep p{font-size:12.5px;color:var(--mist);line-height:1.6}
+  .tstep .tcond{display:block;font-size:11px;color:rgba(16,23,54,.42);margin-top:8px;line-height:1.5}
+
+  .lt-note{margin-top:34px;border:1px solid var(--line-l);border-radius:14px;background:var(--paper);padding:24px 26px}
+  .lt-note .lt-nhead{font-size:14px;font-weight:900;color:var(--ink);margin-bottom:12px}
+  .lt-note ul{list-style:none;margin:0;padding:0;columns:2;column-gap:32px}
+  @media(max-width:640px){.lt-note ul{columns:1}}
+  .lt-note li{font-size:12.5px;color:var(--mist);line-height:1.6;padding:4px 0 4px 16px;position:relative;break-inside:avoid}
+  .lt-note li::before{content:"・";position:absolute;left:0;color:var(--orange)}
+
+  /* ---------- faq ---------- */
+  .faq{margin-top:44px;max-width:820px}
+  .faq details{border:1px solid var(--line-l);border-radius:12px;background:#fff;margin-bottom:12px;overflow:hidden}
+  .faq summary{
+    list-style:none;cursor:pointer;padding:20px 22px;font-weight:700;font-size:15px;color:var(--ink);
+    display:flex;align-items:center;gap:14px;
+  }
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary .q{font-family:var(--latin);color:var(--orange);font-size:18px;flex-shrink:0}
+  .faq summary .chev{margin-left:auto;color:var(--orange);font-size:20px;line-height:1;transition:transform .25s ease}
+  .faq details[open] summary .chev{transform:rotate(90deg)}
+  .faq .faq-a{padding:0 22px 20px 54px;font-size:13.5px;color:var(--mist);line-height:1.8}
+  .faq .faq-a a{color:var(--orange);font-weight:700;text-decoration:underline;text-underline-offset:2px}
+  @media(prefers-reduced-motion:reduce){.faq summary .chev{transition:none}}
+  .steps{margin-top:46px;max-width:760px}
+  .step{
+    display:flex;gap:22px;align-items:flex-start;position:relative;padding-bottom:34px;
+  }
+  .step:last-child{padding-bottom:0}
+  .step::before{
+    content:"";position:absolute;left:23px;top:50px;bottom:-4px;width:2px;
+    background:linear-gradient(180deg,rgba(240,100,10,.5),rgba(16,23,54,.10));
+  }
+  .step:last-child::before{display:none}
+  .step .snum{
+    flex-shrink:0;width:48px;height:48px;border-radius:50%;
+    background:var(--orange);color:#fff;font-family:var(--latin);font-size:20px;
+    display:flex;align-items:center;justify-content:center;z-index:1;
+    box-shadow:0 6px 18px rgba(240,100,10,.32);
+  }
+  .step .sbody{padding-top:6px}
+  .step .sbody h3{font-size:17px;font-weight:900;color:var(--ink);margin:0 0 6px;line-height:1.4}
+  .step .sbody p{font-size:13.5px;color:var(--mist);line-height:1.7}
+  .step .sbody .sactor{
+    display:inline-block;font-size:11px;font-weight:700;letter-spacing:.02em;
+    padding:2px 10px;border-radius:999px;margin-bottom:8px;
+  }
+  .sactor.you{background:rgba(240,100,10,.12);color:var(--orange)}
+  .sactor.us{background:rgba(16,23,54,.07);color:var(--mist)}
+
+  /* ---------- message (representative) ---------- */
+  .message-wrap{max-width:768px;margin:46px auto 0}
+  .message-body p{font-size:15px;color:var(--ink);line-height:2.05;margin:0 0 18px}
+  .message-body p:last-child{margin-bottom:0}
+  .message-body .lead-q{font-weight:700}
+  .message-portrait{display:flex;flex-direction:column;align-items:center;margin-bottom:34px}
+  .message-portrait img{width:150px;height:150px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 12px 32px rgba(16,23,54,.18)}
+  .message-portrait .pcap{margin-top:16px;text-align:center}
+  .message-portrait .pcap b{display:block;font-size:18px;color:var(--ink);font-weight:900;letter-spacing:.02em}
+  .message-portrait .pcap .role{display:block;font-size:13px;color:var(--mist);margin-top:7px;line-height:1.6}
+  .message-portrait .pcap .sub{display:block;font-size:11.5px;color:var(--mist);opacity:.85;margin-top:3px}
+
+  /* ---------- testimonials ---------- */
+  .voice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:46px}
+  @media(max-width:860px){.voice-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.voice-grid{grid-template-columns:1fr}}
+  .vcard{
+    background:#fff;border:1px solid var(--line-l);border-radius:16px;padding:28px 26px;
+    display:flex;flex-direction:column;transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .vcard:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(16,23,54,.10)}
+  .vcard .stars{color:var(--orange);font-size:15px;letter-spacing:2px;margin-bottom:14px}
+  .vcard .vtitle{font-size:16px;font-weight:900;color:var(--ink);line-height:1.5;margin-bottom:12px}
+  .vcard .vbody{font-size:13px;color:var(--mist);line-height:1.8;flex:1}
+  .vcard .vwho{display:flex;align-items:center;gap:12px;margin-top:20px;padding-top:18px;border-top:1px solid var(--line-l)}
+  .vcard .vava{
+    flex-shrink:0;width:46px;height:46px;border-radius:50%;object-fit:cover;
+    background:linear-gradient(150deg,#1c2e72,#0e1944);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:900;font-size:16px;
+  }
+  .vcard .vmeta b{display:block;font-size:13.5px;color:var(--ink);font-weight:700}
+  .vcard .vmeta small{display:block;font-size:11.5px;color:var(--mist);margin-top:1px}
+  .voice-note{margin-top:22px;font-size:11.5px;color:var(--mist);text-align:center}
+
+  /* ---------- quality (selected reasons) ---------- */
+  .quality-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:48px}
+  @media(max-width:760px){.quality-grid{grid-template-columns:1fr;gap:30px}}
+  .qcard .qshot{
+    border-radius:16px;overflow:hidden;border:1px solid var(--line-l);
+    background:linear-gradient(160deg,#1a2a66,#0e1944);
+    box-shadow:0 22px 50px rgba(16,23,54,.18);
+  }
+  .qcard .qshot .shot-ph{aspect-ratio:16/9}
+  .qcard h3{font-family:var(--display);font-weight:900;font-size:23px;color:var(--ink);margin:24px 0 8px;line-height:1.3}
+  .qcard p{font-size:14.5px;color:var(--mist);line-height:1.75}
+
+  /* ---------- status legend ---------- */
+  .legend{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+  @media(max-width:720px){.legend{grid-template-columns:1fr}}
+  .leg{border:1px solid var(--line-l);border-radius:14px;padding:24px 22px;background:var(--paper)}
+  .leg .chip{margin-bottom:14px}
+  .leg p{font-size:13.5px;color:var(--mist);line-height:1.7}
+  .legend-note{margin-top:26px;font-size:12px;color:var(--mist);opacity:.85;text-align:center}
+
+  /* ---------- final CTA ---------- */
+  .cta{
+    background:
+      radial-gradient(700px 400px at 50% -20%, rgba(240,100,10,.28), transparent 60%),
+      linear-gradient(180deg,var(--navy),var(--navy-deep));
+    text-align:center;padding:110px 0;
+  }
+  .cta h2{font-family:var(--display);font-weight:900;font-size:clamp(28px,4.5vw,48px);line-height:1.18;color:#fff}
+  .cta p{margin:20px auto 0;max-width:32em;color:rgba(255,255,255,.78);font-size:16px}
+  .cta-btns{display:flex;gap:14px;justify-content:center;margin-top:36px;flex-wrap:wrap}
+  .cta .btn{font-size:16px;padding:16px 32px}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--navy-deep);color:rgba(255,255,255,.6);padding:54px 0 40px;border-top:1px solid var(--line-d)}
+  .foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start}
+  .foot .logo img{height:42px;margin-bottom:16px}
+  .foot address{font-style:normal;font-size:13px;line-height:1.9}
+  .foot .copy{font-size:12px;color:rgba(255,255,255,.4);margin-top:28px;width:100%;border-top:1px solid var(--line-d);padding-top:20px}
+
+  /* ---------- contact modal ---------- */
+  .modal-overlay{
+    position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;
+    padding:24px;background:rgba(8,14,34,.72);backdrop-filter:blur(6px);
+    opacity:0;visibility:hidden;transition:opacity .3s ease, visibility .3s ease;
+  }
+  .modal-overlay.open{opacity:1;visibility:visible}
+  .modal{
+    background:#fff;color:var(--ink);border-radius:20px;max-width:440px;width:100%;
+    padding:36px 30px 30px;position:relative;
+    box-shadow:0 40px 90px rgba(0,0,0,.5);
+    transform:translateY(20px) scale(.97);transition:transform .35s cubic-bezier(.16,.84,.34,1);
+  }
+  .modal-overlay.open .modal{transform:none}
+  .modal-close{
+    position:absolute;top:16px;right:16px;width:34px;height:34px;border-radius:50%;
+    border:none;background:var(--paper);color:var(--mist);font-size:20px;line-height:1;
+    cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,color .2s;
+  }
+  .modal-close:hover{background:#e9edf5;color:var(--ink)}
+  .modal h3{font-family:var(--display);font-weight:900;font-size:23px;margin:0 0 6px;letter-spacing:.01em}
+  .modal .msub{font-size:13.5px;color:var(--mist);margin-bottom:24px;line-height:1.6}
+  .contact-opts{display:flex;flex-direction:column;gap:12px}
+  .copt{
+    display:flex;align-items:center;gap:16px;text-align:left;
+    border:1px solid var(--line-l);border-radius:14px;padding:16px 18px;
+    transition:transform .15s ease, box-shadow .2s ease, border-color .2s;
+  }
+  .copt:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(16,23,54,.10);border-color:rgba(240,100,10,.5)}
+  .copt .cico{
+    flex-shrink:0;width:46px;height:46px;border-radius:12px;
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--latin);font-size:13px;letter-spacing:.02em;color:#fff;
+  }
+  .copt .cico.line{background:#06C755}
+  .copt .cico.cw{background:#2E7CE4}
+  .copt .ctxt{flex:1}
+  .copt .ctxt b{display:block;font-size:15.5px;font-weight:700;color:var(--ink)}
+  .copt .ctxt small{display:block;font-size:12.5px;color:var(--mist);margin-top:2px;line-height:1.5}
+  .copt .carr{color:var(--mist);flex-shrink:0;font-size:18px;transition:transform .2s,color .2s}
+  .copt:hover .carr{color:var(--orange);transform:translateX(3px)}
+  @media(prefers-reduced-motion:reduce){
+    .modal-overlay,.modal{transition:none}
+    .modal{transform:none}
+    .copt:hover{transform:none}
+    .copt:hover .carr{transform:none}
+  }
+
+  /* ---------- reveal animation ---------- */
+  .reveal{opacity:0;transform:translateY(40px) scale(.985);transition:opacity .8s cubic-bezier(.16,.84,.34,1), transform .8s cubic-bezier(.16,.84,.34,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* directional variants */
+  .reveal.from-left{transform:translateX(-56px)}
+  .reveal.from-right{transform:translateX(56px)}
+  .reveal.from-left.in,.reveal.from-right.in{transform:none}
+
+  /* section heads: rise a touch more with a hint of scale */
+  .sec-head.reveal{transform:translateY(48px) scale(.97)}
+  .sec-head.reveal.in{transform:none}
+
+  /* staggered children: cards animate in sequence when parent enters */
+  .stagger > *{opacity:0;transform:translateY(46px) scale(.97);transition:opacity .72s cubic-bezier(.16,.84,.34,1), transform .72s cubic-bezier(.16,.84,.34,1)}
+  .stagger.in > *{opacity:1;transform:none}
+  .stagger.in > *:nth-child(1){transition-delay:.00s}
+  .stagger.in > *:nth-child(2){transition-delay:.12s}
+  .stagger.in > *:nth-child(3){transition-delay:.24s}
+  .stagger.in > *:nth-child(4){transition-delay:.36s}
+  .stagger.in > *:nth-child(5){transition-delay:.48s}
+  .stagger.in > *:nth-child(6){transition-delay:.60s}
+
+  /* hero load sequence */
+  .hero-seq{opacity:0;transform:translateY(34px) scale(.98);animation:heroIn .9s cubic-bezier(.16,.84,.34,1) forwards}
+  .hero-seq.d1{animation-delay:.08s}
+  .hero-seq.d2{animation-delay:.22s}
+  .hero-seq.d3{animation-delay:.38s}
+  .hero-seq.d4{animation-delay:.54s}
+  .hero-seq.d5{animation-delay:.72s}
+  @keyframes heroIn{to{opacity:1;transform:none}}
+
+  @media(prefers-reduced-motion:reduce){
+    .reveal,.sec-head.reveal,.stagger > *{opacity:1;transform:none;transition:none}
+    .hero-seq{opacity:1;transform:none;animation:none}
+    html{scroll-behavior:auto}
+    .btn:hover,.pain:hover,.feat:hover{transform:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top"><img src="images/logo.webp" alt="神戸バンブー代行"></a>
+    <nav class="nav-links">
+      <a href="#flagship">目玉機能</a>
+      <a href="#pricing">料金</a>
+      <a href="#leadtime">納期</a>
+      <a href="#quality">現場品質</a>
+      <a href="#voices">お客様の声</a>
+      <a href="#howto">ご利用の流れ</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="btn ghost">お問い合わせ</a>
+      <a href="https://share.hsforms.com/1IXWWQMrUTYGnwg9T3xzplgrvgvr" target="_blank" rel="noopener" class="btn">審査申込</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- mobile menu (populated from header nav) -->
+<div class="mobile-menu" id="mobileMenu"></div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow hero-seq d1">China Import &middot; BambooDaikou</span>
+      <h1 class="hero-seq d2">売れるほど、<br><span class="hl">ラクになる。</span></h1>
+      <p class="lead hero-seq d3">神戸バンブー代行の新しい総合仕入れ管理システム。<br>有在庫とのハイブリッド販売にも<strong style="color:#fff">完全対応！</strong></p>
+      <div class="hero-cta hero-seq d4">
+        <a href="#contact" class="btn">導入を相談する</a>
+        <a href="#flagship" class="btn ghost">機能を見る</a>
+      </div>
+      <p class="hero-note hero-seq d4">日本語でやりとり／LINE・Chatwork対応／Shopify・BASE・STORES連携</p>
+    </div>
+    <div class="hero-stats hero-seq d3">
+      <div class="hstat">
+        <span class="hnum">80<span class="u">万件</span></span>
+        <span class="hlabel">無在庫の対応実績</span>
+      </div>
+      <div class="hstat">
+        <span class="hnum">90<span class="u">%超</span></span>
+        <span class="hlabel">高い継続率</span>
+      </div>
+      <div class="hstat">
+        <span class="hnum">0.2<span class="u">〜0.25%</span></span>
+        <span class="hlabel">検品後の不良率</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- signature: visibility -->
+  <div class="wrap vis hero-seq d5">
+    <div class="vis-head">受注したあとは、<span class="hl">全て画面で見えます。</span></div>
+    <div class="vis-grid">
+      <div class="vis-item"><span class="vk"></span><div><b>コストと利益・利益率</b><small>仕入れコストとオーダーごとの利益</small></div></div>
+      <div class="vis-item"><span class="vk"></span><div><b>利益率の改善提案</b><small>目標に届かないオーダーの改善ヒント</small></div></div>
+      <div class="vis-item"><span class="vk"></span><div><b>保有在庫状況</b><small>在庫の保有数・引き当て状況</small></div></div>
+      <div class="vis-item"><span class="vk"></span><div><b>仕入れの進捗</b><small>今どこまで進んでいるか</small></div></div>
+      <div class="vis-item"><span class="vk"></span><div><b>再手配の進捗</b><small>不良時の交換・再仕入れの状況</small></div></div>
+      <div class="vis-item"><span class="vk"></span><div><b>輸送・配達状況</b><small>発送後の輸送から日本での配達まで</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAIN ===== -->
+<section class="sec-light" id="pain">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The Problem</span>
+      <h2>注文は増えた。<br>なのに、ラクにならない。</h2>
+      <p>受注のたびに作業が積み上がり、肝心の利益も在庫も後回し——無在庫販売で多くの方がぶつかる壁です。</p>
+    </div>
+    <div class="pain-grid stagger">
+      <div class="pain"><div class="n">01</div><h3>売れるほど<br>作業に追われる</h3><p>受注のたびに仕入れと管理。肝心のリサーチや売上を伸ばす時間が、どんどん作りづらくなる。</p></div>
+      <div class="pain"><div class="n">02</div><h3>利益が<br>把握しきれない</h3><p>実際どれくらい儲かっているのか。コストが入り組んで、利益の管理が煩雑になりがち。</p></div>
+      <div class="pain"><div class="n">03</div><h3>在庫も使って<br>攻めたい</h3><p>売れ筋は在庫を積んで、無在庫とハイブリッドで売りたい。でも在庫管理まで手が回らない。</p></div>
+      <div class="pain"><div class="n">04</div><h3>中国側との<br>やり取りが不安</h3><p>担当者とのやり取りが要領を得ない。認識のズレが、後々のトラブルにつながらないか心配。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TURN ===== -->
+<section class="sec-deep turn">
+  <div class="wrap reveal">
+    <span class="eyebrow">The Answer</span>
+    <h2>受注したら、<br>あとは<span class="hl">画面を眺めるだけ</span>。</h2>
+    <p>仕入れの依頼から shop の発送通知まで完全自動化。空いた時間で売上を伸ばす策を練り、利益がちゃんと出ているか実際の数字を見ながら、利益改善に取り組めます。</p>
+  </div>
+</section>
+
+<!-- ===== FLAGSHIP ===== -->
+<section class="sec-white" id="flagship">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Flagship Features</span>
+      <h2>全部揃ってるのは、<br>神戸バンブー代行だけ。</h2>
+      <p>完全自動化・利益の見える化・経理の簡略化・在庫管理・日本人対応・高品質検品・綺麗な梱包。どれか一つではなく、全てが揃う——それが他の代行との違いです。</p>
+    </div>
+
+    <!-- cluster 1 -->
+    <div class="cluster reveal">
+      <div class="cluster-aside">
+        <span class="knum">01 / AUTOMATION</span>
+        <h3>完全自動化</h3>
+        <p>ショップ連携で受注から発送通知まで自動化。作業を手放し、リサーチや売上づくりに時間を取り戻します。</p>
+      </div>
+      <div class="feat-list">
+        <div class="feat">
+          <div class="feat-body">
+            <div class="ttl">ネットショップ連携（BASE / Shopify / STORES）</div>
+            <div class="desc">ショップで売れた注文の取り込みから発注、発送通知のショップ反映まで完全自動化。注文が増えても、発注の手間は比例して増えません。</div>
+          </div>
+          <div class="feat-status"><span class="chip soon"><span class="led"></span>近日公開予定</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- cluster 2 -->
+    <div class="cluster reveal">
+      <div class="cluster-aside">
+        <span class="knum">02 / PROFIT</span>
+        <h3>利益の見える化<br>経理の簡略化</h3>
+        <p>どれくらい儲かっているかを可視化し、改善と経理の手間削減まで踏み込みます。</p>
+      </div>
+      <div class="feat-list">
+        <div class="feat">
+          <div class="feat-body">
+            <div class="ttl">粗利管理 ／ 目標粗利率の設定 ／ 改善提案</div>
+            <div class="desc">オーダーごとの利益・利益率を可視化。目標の粗利率を設定すると、未達のオーダーを抽出して改善のヒントを提示します。値付け・仕入れ判断の武器に。</div>
+          </div>
+          <div class="feat-status"><span class="chip soon"><span class="led"></span>近日公開予定</span></div>
+        </div>
+        <div class="feat">
+          <div class="feat-body">
+            <div class="ttl">会計ソフト連携</div>
+            <div class="desc">取引データが会計側へ流れ、経理の入力作業をなくしていきます。</div>
+          </div>
+          <div class="feat-status"><span class="chip plan"><span class="led"></span>順次公開予定</span></div>
+        </div>
+        <div class="feat">
+          <div class="feat-body">
+            <div class="ttl">税理士にそのまま渡せる月次データDL</div>
+            <div class="desc">毎月のデータをワンクリックで出力。顧問税理士への受け渡しが一発で済みます。</div>
+          </div>
+          <div class="feat-status"><span class="chip plan"><span class="led"></span>順次公開予定</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- cluster 3 -->
+    <div class="cluster reveal">
+      <div class="cluster-aside">
+        <span class="knum">03 / INVENTORY</span>
+        <h3>在庫管理</h3>
+        <p>無在庫と有在庫のいいとこ取り。スピードと在庫リスクを両取りします。</p>
+      </div>
+      <div class="feat-list">
+        <div class="feat">
+          <div class="feat-body">
+            <div class="ttl">無在庫 × 有在庫のハイブリッド完全対応</div>
+            <div class="desc">売れ筋は在庫から即出荷、その他は無在庫で。1つの注文の中で「在庫から」と「新規仕入れ」を混ぜることもできます。</div>
+          </div>
+          <div class="feat-status"><span class="chip soon"><span class="led"></span>近日公開予定</span></div>
+        </div>
+        <div class="feat">
+          <div class="feat-body">
+            <div class="ttl">在庫の発注タイミングを可視化</div>
+            <div class="desc">発注から入庫までの平均日数・平均販売数から、「いつ・何個発注すれば・何個キープできるか」の目安を表示。在庫切れも余剰も防ぎます。</div>
+          </div>
+          <div class="feat-status"><span class="chip plan"><span class="led"></span>順次公開予定</span></div>
+        </div>
+        <div class="feat">
+          <div class="feat-body">
+            <div class="ttl">棚卸し（月末の在庫金額を表示）</div>
+            <div class="desc">月末時点の在庫評価額を自動で算出。決算や資金繰りの把握がぐっと楽になります。</div>
+          </div>
+          <div class="feat-status"><span class="chip plan"><span class="led"></span>順次公開予定</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- cluster 4 -->
+    <div class="cluster reveal">
+      <div class="cluster-aside">
+        <span class="knum">04 / SUPPORT</span>
+        <h3>日本人対応</h3>
+        <p>大手の自動化代行との、いちばんの違い。言葉の壁をなくします。</p>
+      </div>
+      <div class="feat-list">
+        <div class="feat">
+          <div class="feat-body">
+            <div class="ttl">日本語で完結するやり取り</div>
+            <div class="desc">中国の現場との間に立ち、やり取りはすべて日本語で。言葉の壁による誤解やトラブルが起きません。</div>
+          </div>
+          <div class="feat-status"><span class="chip live"><span class="led"></span>提供中</span></div>
+        </div>
+        <div class="feat">
+          <div class="feat-body">
+            <div class="ttl">不良・仕様の細かいニュアンスまで正確に</div>
+            <div class="desc">写真と翻訳で現場と細かく共有。微妙な仕様の違いや不良の状態も、抜け漏れなく正確に伝わります。</div>
+          </div>
+          <div class="feat-status"><span class="chip live"><span class="led"></span>提供中</span></div>
+        </div>
+        <div class="feat">
+          <div class="feat-body">
+            <div class="ttl">LINE / Chatwork で気軽に相談</div>
+            <div class="desc">困ったときは、普段使っているツールから日本語で。すぐ相談できる安心感があります。</div>
+          </div>
+          <div class="feat-status"><span class="chip live"><span class="led"></span>提供中</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="shot reveal" style="margin-top:50px">
+<img src="images/arari.webp" alt="粗利管理画面。月次の売上・コスト・粗利・粗利率と、オーダー別の内訳が一目で分かる" style="width:100%;display:block;height:auto">
+      </div>
+      <div class="shot reveal" style="margin-top:24px">
+        <img src="images/zaiko.webp" alt="在庫一覧画面。商品ごとの在庫・予約・確定・利用可・在庫金額が一目で分かる" style="width:100%;display:block;height:auto">
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section class="sec-deep" id="pricing">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Pricing</span>
+      <h2>料金は、<br>業界最安を保証。</h2>
+      <p>月額無料から始められて、出荷が増えるほどおトクに。詳細検品と OPP袋・外装袋の交換まで、代行手数料に込みです。</p>
+    </div>
+
+    <div class="guarantee reveal"><b>業界最安保証</b><span>他社よりも高ければ、ぜひご相談ください。</span></div>
+
+    <div class="price-grid stagger">
+      <!-- free plan -->
+      <div class="pcard free">
+        <div class="pname">無料プラン</div>
+        <div class="pprice">¥0<span class="unit">/月</span></div>
+        <div class="pfee">
+          <span class="l">代行手数料</span>
+          <span class="v">15元<small>/点</small></span>
+        </div>
+        <ul class="pinc">
+          <li>詳細検品 込み</li>
+          <li>OPP袋・外装袋の交換 込み</li>
+        </ul>
+        <div class="pship">
+          <div class="pshead">国際送料</div>
+          <div class="prow"><b>佐川</b><span>45元〜（+0.5kgごと +15元）</span></div>
+          <div class="prow"><b>DM便</b><span>26元〜（+0.1kgごと +5元）</span></div>
+        </div>
+        <a href="#contact" class="btn">このプランで相談する</a>
+      </div>
+
+      <!-- paid plan -->
+      <div class="pcard featured">
+        <div class="pbadge">出荷が多い方におすすめ</div>
+        <div class="pname">スタンダードプラン</div>
+        <div class="pprice">¥29,800<span class="unit">/月</span></div>
+        <div class="pfee">
+          <span class="l">代行手数料</span>
+          <span class="v">13元<small>/点</small></span>
+        </div>
+        <div class="pbreak">月およそ <b id="breakNum">134</b> オーダー以上でおトク</div>
+        <div class="bsub">※1オーダーあたり約9元おトク（1元=24.8円で計算）</div>
+        <ul class="pinc">
+          <li>詳細検品 込み</li>
+          <li>OPP袋・外装袋の交換 込み</li>
+        </ul>
+        <div class="pship">
+          <div class="pshead">国際送料</div>
+          <div class="prow"><b>佐川</b><span>38元〜（+0.5kgごと +10元）</span></div>
+          <div class="prow"><b>DM便</b><span>23元〜（+0.1kgごと +3元）</span></div>
+        </div>
+        <a href="#contact" class="btn">このプランで相談する</a>
+      </div>
+    </div>
+
+    <p class="price-note">※ 国際送料は重量・配送方法により変動します。オプション料金・その他の費用は下記でご確認いただけます。<br>別途お見積もり・ご要望も、お気軽にご相談ください。</p>
+
+    <div class="acc reveal">
+      <details>
+        <summary>オプション料金を見る<span class="chev">&rsaquo;</span></summary>
+        <div class="acc-body">
+          <div class="prow2"><div class="pr-head"><b>あんしん検品</b><span class="pr-fee">無料</span></div><div class="pr-desc">裏表の外観チェック／ファスナー・ボタン確認／糸くず切り／サイズ表示確認／ポケット内の確認（検品項目はカスタマイズ可能）</div></div>
+          <div class="prow2"><div class="pr-head"><b>補修</b><span class="pr-fee">無料</span></div><div class="pr-desc">洗浄可能な汚れや、修復可能な破損を修理します。</div></div>
+          <div class="prow2"><div class="pr-head"><b>OPP袋入替</b><span class="pr-fee">無料</span></div><div class="pr-desc">新品のOPP袋へ入れ替えます。</div></div>
+          <div class="prow2"><div class="pr-head"><b>宅配袋入替</b><span class="pr-fee">無料</span></div><div class="pr-desc">新品の宅配袋へ入れ替えます。</div></div>
+          <div class="prow2"><div class="pr-head"><b>綺麗な宅配袋入替</b><span class="pr-fee">1.5元 / 袋</span></div><div class="pr-desc">品質の良い綺麗な宅配袋へ入れ替えます。</div></div>
+          <div class="prow2"><div class="pr-head"><b>発送元情報指定</b><span class="pr-fee">無料</span></div><div class="pr-desc">送り状に記載される発送元情報を指定できます。</div></div>
+          <div class="prow2"><div class="pr-head"><b>別オーダー同梱</b><span class="pr-fee">無料</span></div><div class="pr-desc">別のオーダーを同梱して発送します。</div></div>
+          <div class="prow2"><div class="pr-head"><b>梱包後の同梱</b><span class="pr-fee">15元 / 梱包</span></div><div class="pr-desc">梱包済みになった後に同梱を希望される場合。</div></div>
+          <div class="prow2"><div class="pr-head"><b>ネームタグカット</b><span class="pr-fee">2元 / 点</span></div><div class="pr-desc">商品に縫い付けられたネームタグをカットします。</div></div>
+          <div class="prow2"><div class="pr-head"><b>ネームタグ交換</b><span class="pr-fee">5元 / 点</span></div><div class="pr-desc">ご用意いただいたオリジナルのタグへ付け替えます。</div></div>
+          <div class="prow2"><div class="pr-head"><b>洗濯表示交換（準備中）</b><span class="pr-fee">5元 / 点</span></div><div class="pr-desc">洗濯表示タグを1枚ずつ付け替えます。</div></div>
+          <div class="prow2"><div class="pr-head"><b>アイロン</b><span class="pr-fee">4元 / 点</span></div><div class="pr-desc">アイロンがけをしてシワを伸ばします。</div></div>
+          <div class="prow2"><div class="pr-head"><b>紙下げ札カットのみ</b><span class="pr-fee">1元 / 点</span></div><div class="pr-desc">付属の紙下げ札を切り取ります。</div></div>
+          <div class="prow2"><div class="pr-head"><b>紙下げ札取り替え</b><span class="pr-fee">2元 / 点</span></div><div class="pr-desc">オリジナルの紙下げ札へ付け替えます。</div></div>
+          <div class="prow2"><div class="pr-head"><b>サイズタグカットのみ</b><span class="pr-fee">1元 / 点</span></div><div class="pr-desc">商品に縫い付けられたサイズタグをカットします。</div></div>
+          <div class="prow2"><div class="pr-head"><b>ボタンホール開け</b><span class="pr-fee">5元 / 点</span></div><div class="pr-desc">アパレルでボタンホールを開ける作業です。</div></div>
+          <div class="prow2"><div class="pr-head"><b>採寸</b><span class="pr-fee">3元 / 点</span></div><div class="pr-desc">商品の実寸を採寸します。</div></div>
+          <div class="prow2"><div class="pr-head"><b>入庫撮影</b><span class="pr-fee">2元 / 点</span></div><div class="pr-desc">入荷した商品を撮影し、チャットでご連絡します。</div></div>
+          <div class="prow2"><div class="pr-head"><b>プチプチ</b><span class="pr-fee">1元 / 点</span></div><div class="pr-desc">商品をプチプチに包んで保護します。</div></div>
+          <div class="prow2"><div class="pr-head"><b>割れ物注意シール</b><span class="pr-fee">1元 / 点</span></div><div class="pr-desc">割れ物注意のシールを外装に貼ります。</div></div>
+          <div class="prow2"><div class="pr-head"><b>アクセサリーBOX</b><span class="pr-fee">3元 / 箱</span></div><div class="pr-desc">アクセサリーを小物BOXに入れて梱包します。</div></div>
+          <div class="prow2"><div class="pr-head"><b>箱梱包</b><span class="pr-fee">5元 / 箱</span></div><div class="pr-desc">箱に梱包してから宅配袋に梱包します。</div></div>
+          <div class="acc-note">表にないオプションも新設可能です。お気軽にご相談ください。</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>その他の費用を見る<span class="chev">&rsaquo;</span></summary>
+        <div class="acc-body">
+          <div class="prow2"><div class="pr-head"><b>商品代差額</b><span class="pr-fee">実費</span></div><div class="pr-desc">在庫切れや不良再手配時に、当初の仕入れ金額と差額が出た場合（安くなる場合は返金します）。</div></div>
+          <div class="prow2"><div class="pr-head"><b>中国国内運賃</b><span class="pr-fee">実費</span></div><div class="pr-desc">仕入れ先への発注時に、中国国内運賃がかかる場合。</div></div>
+          <div class="prow2"><div class="pr-head"><b>不良返送運賃</b><span class="pr-fee">実費</span></div><div class="pr-desc">不良返送の際、中国では不良と認められないケースの場合。</div></div>
+          <div class="prow2"><div class="pr-head"><b>不良返送運賃</b><span class="pr-fee">2元前後</span></div><div class="pr-desc">不良返送の際、セラー負担だが実費を超える場合。</div></div>
+          <div class="prow2"><div class="pr-head"><b>梱包完了後の同梱</b><span class="pr-fee">15元 / 梱包</span></div><div class="pr-desc">すでに梱包が完了している荷物を同梱する場合。</div></div>
+          <div class="prow2"><div class="pr-head"><b>不良再手配</b><span class="pr-fee">5元 / 点</span></div><div class="pr-desc">検品時に不良が出て、再手配をする場合。</div></div>
+          <div class="prow2"><div class="pr-head"><b>キャンセル費用</b><span class="pr-fee">15元＋実費</span></div><div class="pr-desc">原則オーダー後はキャンセル不可。入荷後、不良・色差・仕様違いなど中国の商習慣では避けられない事情による場合は、15元＋返送料実費。</div></div>
+          <div class="prow2"><div class="pr-head"><b>保管料</b><span class="pr-fee">1元 / 着・日</span></div><div class="pr-desc">最初の1ヶ月は無料。1ヶ月を過ぎると保管費用・破棄費用がかかります。</div></div>
+          <div class="prow2"><div class="pr-head"><b>破棄費用（上海）</b><span class="pr-fee">500円前後</span></div><div class="pr-desc">保管商品を破棄する場合。</div></div>
+          <div class="prow2"><div class="pr-head"><b>資材・ノベルティの保管</b><span class="pr-fee">36元 / 0.5㎡</span></div><div class="pr-desc">1ヶ月あたりの保管費用です。</div></div>
+          <div class="prow2"><div class="pr-head"><b>住所変更</b><span class="pr-fee">1,200円</span></div><div class="pr-desc">上海発送後に、お届け先住所を変更される場合。</div></div>
+          <div class="prow2"><div class="pr-head"><b>倉庫返送料</b><span class="pr-fee">1,000円前後</span></div><div class="pr-desc">受取人の長期不在・住所不明などで物流倉庫へ返送された場合。</div></div>
+          <div class="prow2"><div class="pr-head"><b>再発送料</b><span class="pr-fee">1,000円前後</span></div><div class="pr-desc">物流倉庫へ返送された荷物を、再度発送する場合。</div></div>
+          <div class="prow2"><div class="pr-head"><b>破棄費用（日本）</b><span class="pr-fee">500円前後</span></div><div class="pr-desc">物流倉庫へ返送された荷物を破棄する場合。</div></div>
+          <div class="prow2"><div class="pr-head"><b>関税</b><span class="pr-fee">実費</span></div><div class="pr-desc">万が一関税が発生した場合は、ユーザー様のご負担となります。</div></div>
+          <div class="prow2"><div class="pr-head"><b>検査費用</b><span class="pr-fee">実費</span></div><div class="pr-desc">税関や出荷前に検査が必要になった場合は、ユーザー様のご負担となります。</div></div>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LEAD TIME ===== -->
+<section class="sec-light" id="leadtime">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Lead Time</span>
+      <h2>無在庫でも、<br>とにかく速い。</h2>
+      <p>ご依頼から、最短5日でお届け。エンドユーザーを待たせないスピードが、リピートにつながります。</p>
+    </div>
+
+    <div class="lt-top reveal">
+      <div class="lt-stat accent">
+        <span class="lt-l">最短</span>
+        <span class="lt-v"><em>5日</em>でお届け可能</span>
+      </div>
+      <div class="lt-stat">
+        <span class="lt-l">平均</span>
+        <span class="lt-v">約 7〜10日 のお届けが多数</span>
+      </div>
+    </div>
+
+    <div class="timeline stagger">
+      <div class="tstep">
+        <span class="tday">DAY 1</span>
+        <h3>ご依頼・仕入れ手配</h3>
+        <p>月曜にご依頼。原則、当日に仕入れを手配します。</p>
+      </div>
+      <div class="tstep">
+        <span class="tday">DAY 2</span>
+        <h3>入荷・検品・発送</h3>
+        <p>翌・火曜に入荷し、検品して発送。</p>
+        <span class="tcond">セラーが当日発送し、不良がなかった場合</span>
+      </div>
+      <div class="tstep">
+        <span class="tday">DAY 3</span>
+        <h3>国際輸送・通関</h3>
+        <p>中国から日本へ。通関を通します。</p>
+      </div>
+      <div class="tstep">
+        <span class="tday">DAY 4</span>
+        <h3>追跡反映</h3>
+        <p>金曜にヤマトの追跡へ反映されます。</p>
+        <span class="tcond">上海ルート（ヤマト）発送で、遅延や税関検査がなかった場合</span>
+      </div>
+      <div class="tstep">
+        <span class="tday">DAY 5</span>
+        <h3>お届け</h3>
+        <p>土曜にお届け。</p>
+        <span class="tcond">大阪から近郊のお届け先の場合</span>
+      </div>
+    </div>
+
+    <div class="lt-note reveal">
+      <div class="lt-nhead">以下の場合は、納期が前後します</div>
+      <ul>
+        <li>セラーがすぐに発送しない場合</li>
+        <li>1オーダー複数商品で、揃うのに日数がかかった場合</li>
+        <li>発送地域が上海から遠方の場合</li>
+        <li>入荷商品が不良で、再手配が必要な場合</li>
+        <li>入荷商品に不備があり、補修が必要な場合</li>
+        <li>入荷商品について確認事項があり、時間がかかった場合</li>
+        <li>ネームタグ・洗濯表示交換などのオプションが重なった場合</li>
+        <li>メール便で発送した場合（追跡反映に +1〜2日）</li>
+        <li>お届け先が大阪から遠方の場合</li>
+        <li>国際輸送に遅延が出た場合</li>
+        <li>日本の税関で検査・遅延が出た場合</li>
+        <li>連休などがある場合</li>
+        <li>その他、不可抗力に起因する遅延の場合</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== QUALITY ===== -->
+<section class="sec-white" id="quality">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Why Bamboo</span>
+      <h2>システムだけじゃない。<br>現場の仕事が、ていねい。</h2>
+      <p>エンドユーザーに届いたときの印象が、そのままショップの評価になる。だから検品と梱包に、いちばん気を配ります。</p>
+    </div>
+    <div class="quality-grid">
+      <div class="qcard reveal from-left">
+        <div class="qshot">
+<img src="images/kenpin.webp" alt="スタッフがタブレットを使い、一品ずつ丁寧に検品している様子" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover">
+        </div>
+        <h3>高品質な検品</h3>
+        <p>日本国内の自社拠点で、一品ずつ丁寧に検品。検品後の不良率は0.2〜0.25%という高精度で、届いてからのトラブルを根元から減らします。</p>
+      </div>
+      <div class="qcard reveal from-right">
+        <div class="qshot">
+<img src="images/konpou.webp" alt="無地の宅配袋と、丁寧に箱詰めされた梱包" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover">
+        </div>
+        <h3>綺麗な梱包</h3>
+        <p>丁寧で綺麗な梱包で、届いたときの印象を大切に。雑な梱包による到着後のトラブルやクレームを防ぎ、ショップの評価を守ります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="sec-deep" id="voices">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Customer Voices</span>
+      <h2>実際に、<br>使っている方の声。</h2>
+      <p>梱包・検品・対応の速さ——いただいたご感想の一部をご紹介します。</p>
+    </div>
+    <div class="voice-grid stagger">
+      <div class="vcard">
+        <div class="stars">★★★★★</div>
+        <div class="vtitle">丁寧な梱包と迅速な対応</div>
+        <p class="vbody">中国からの発送荷物はキレイな印象がなかったのですが、梱包がとても丁寧だったのでびっくりしました。今まで他の代行会社を使っていましたが、知人の紹介で初めて利用しました。評判通り、迅速で丁寧な対応でした。またよろしくお願いします！</p>
+        <div class="vwho"><img class="vava" src="images/face_yoshio.webp" alt="よしおさん"><span class="vmeta"><b>よしおさん（仮名）</b><small>アパレルショップ運営</small></span></div>
+      </div>
+      <div class="vcard">
+        <div class="stars">★★★★★</div>
+        <div class="vtitle">レスポンスが早く、親切丁寧</div>
+        <p class="vbody">問い合わせをすると返信のレスポンスがとても速く、親切丁寧な回答をいただきました！おかげで安心して取引ができました。今後ともよろしくお願いいたします。</p>
+        <div class="vwho"><img class="vava" src="images/face_nami.webp" alt="なみさん"><span class="vmeta"><b>なみさん（仮名）</b><small>インテリア雑貨ショップ運営</small></span></div>
+      </div>
+      <div class="vcard">
+        <div class="stars">★★★★★</div>
+        <div class="vtitle">安心して使えて、ショップのお客様からも高評価</div>
+        <p class="vbody">2年くらい無在庫販売をしています。『あんしん検品』は不良がなくてとても助かり、安心して仕入れ発送を任せられます。梱包も丁寧なので、お客様からも高評価をもらっています。今後ともよろしくお願いします。</p>
+        <div class="vwho"><img class="vava" src="images/face_tanaka.webp" alt="田中さん"><span class="vmeta"><b>田中さん（仮名）</b><small>レディースアパレルショップ運営</small></span></div>
+      </div>
+      <div class="vcard">
+        <div class="stars">★★★★★</div>
+        <div class="vtitle">安心してお任せできました</div>
+        <p class="vbody">迅速に対応していただき、発注した商品も無事に届きました。『あんしん検品』では不良品が一つもなく、とてもよいお取引をさせていただきました。引き続きよろしくお願いします。また注文したいと思います！</p>
+        <div class="vwho"><img class="vava" src="images/face_tsuyoshi.webp" alt="剛士さん"><span class="vmeta"><b>剛士さん（仮名）</b><small>雑貨ショップ運営</small></span></div>
+      </div>
+      <div class="vcard">
+        <div class="stars">★★★★★</div>
+        <div class="vtitle">検品精度が一番の評価</div>
+        <p class="vbody">テスト仕入れとして初めての利用でしたが、今まで利用した代行業者さんの中で【梱包・検品の精度】が一番高いと感じました。ショップのお客様にも感謝の言葉をいただきました！とても満足です。今後ともよろしくお願いいたします。</p>
+        <div class="vwho"><img class="vava" src="images/face_sato.webp" alt="佐藤さん"><span class="vmeta"><b>佐藤さん（仮名）</b><small>アクセサリーショップ運営</small></span></div>
+      </div>
+      <div class="vcard">
+        <div class="stars">★★★★★</div>
+        <div class="vtitle">在庫切れなどのトラブル時でも迅速に対応</div>
+        <p class="vbody">いろんな代行業者を利用しましたが、こちらでは不良品がなく梱包も非常に丁寧でした。注文後すぐにスタッフさんから在庫切れの連絡があり、すぐ代わりの商品を探せました。おかげで必要な商品がすぐ揃って届き、とてもありがたかったです。今後ともよろしくお願いいたします。</p>
+        <div class="vwho"><img class="vava" src="images/face_hana.webp" alt="はなさん"><span class="vmeta"><b>はなさん（仮名）</b><small>インテリア家具ショップ運営</small></span></div>
+      </div>
+    </div>
+    <p class="voice-note">※ 掲載内容は、実際にいただいたお客様のご感想です。</p>
+  </div>
+</section>
+
+<!-- ===== MESSAGE ===== -->
+<section class="sec-white" id="message">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Message</span>
+      <h2>代表挨拶</h2>
+    </div>
+    <div class="message-wrap reveal">
+      <div class="message-portrait">
+        <img src="images/daihyou.webp" alt="神戸バンブー代行 代表 竹村 政彦">
+        <div class="pcap">
+          <b>竹村 政彦</b>
+          <span class="role">神戸バンブー代行 代表</span>
+        </div>
+      </div>
+      <div class="message-body">
+        <p>中国輸入という世界に出会ったのは、2013年のことでした。最初は出張の付き添いから始まり、気づけば10年以上──言葉も文化も違うこの国で、驚きの連続のなか、多くの学びを得てきました。</p>
+        <p>当時はまだ「無在庫販売」そのものが浸透しておらず、試行錯誤しながらも「仕入れの不安を取り除き、販売に集中できるよう支える仕組みがあれば」──そんな声とニーズに背中を押され、神戸バンブー代行を立ち上げました。</p>
+        <p>おかげさまで現在では、累計80万件の無在庫対応実績、継続率90%以上という形で、多くの事業者様の&ldquo;裏方&rdquo;として関わらせていただいています。</p>
+        <p>しかし中国輸入の世界は、いまも目まぐるしく変化しています。物流、為替、企業の動向……予測の効かないこの時代だからこそ、私たちが大切にしているのは「誰のために仕入れを支えているか」という原点です。</p>
+        <p>本気で頑張る方にとって、不安なくチャレンジできる後方支援チームでありたい。だからこそ、2025年2月より完全審査制を導入し、本当に必要としてくださる方に、より深く寄り添える体制へと移行しました。</p>
+        <p>時代の流れとともにお客様のニーズは多様化し、ショップ連携のような仕組みも欠かせないものになりました。その変化のなかで、私たちが長く課題に感じてきたのが「システム」です。</p>
+        <p>そしてついに、自社開発によって、無在庫販売に必要な機能をすべて網羅する仕組みが整いました。仕入れ代行として、もう死角はありません。元より定評をいただいてきた対応力に、この仕組みが加わったことで、お客様のショップ運営に本当の意味で貢献できると確信しています。</p>
+        <p>これからも、最良のサービスを最安で、最速で──ではなく、「売上が伸びれば、事業に集中できる」。そんな状態を一緒につくる。それが、神戸バンブー代行の使命です。どうか、あなたの挑戦に、私たちを加えてください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== IMPROVE ===== -->
+<section class="sec-light" id="improve">
+  <div class="wrap">
+    <div class="sec-head reveal" style="max-width:46em">
+      <span class="eyebrow">Now Available</span>
+      <div class="imp-head">
+        <h2>「連絡しないとできなかった」が、<br>なくなりました。</h2>
+        <span class="imp-allnow reveal">すべて提供中・契約直後から使えます</span>
+      </div>
+      <p>以前のシステムでは弊社への連絡が必要だった操作も、見えにくかった情報も、ぜんぶマイページで完結します。</p>
+    </div>
+
+    <div class="imp-cols stagger">
+      <div class="imp-card">
+        <span class="cap">SELF-SERVE</span>
+        <h3>自分で完結できる</h3>
+        <p class="sub">これまで依頼が必要だった操作が、ワンクリックに。</p>
+        <div class="imp-row"><span class="was">以前：要連絡</span><span class="now">同梱依頼<small>マイページから簡単に</small></span></div>
+        <div class="imp-row"><span class="was">以前：要相談</span><span class="now">一部先行発送の依頼<small>必要な分だけ先に発送</small></span></div>
+        <div class="imp-row"><span class="was">以前：要連絡</span><span class="now">お届け先の変更<small>梱包前ならいつでも自分で</small></span></div>
+        <div class="imp-row"><span class="was">以前：要連絡</span><span class="now">発送元情報の変更<small>梱包前ならいつでも自分で</small></span></div>
+        <div class="imp-row"><span class="was">以前：毎回指定</span><span class="now">オプションのデフォルト設定<small>一度決めれば自動で適用</small></span></div>
+        <div class="imp-row"><span class="was">以前：運用で調整</span><span class="now">国際運賃の自動支払い ON / OFF<small>自分で切り替え可能</small></span></div>
+      </div>
+
+      <div class="imp-card">
+        <span class="cap">VISIBILITY</span>
+        <h3>一目で分かる</h3>
+        <p class="sub">見えにくかった情報が、画面ですぐ把握できます。</p>
+        <div class="imp-row"><span class="was">以前：不透明</span><span class="now">再手配時の進捗管理<small>どこまで進んだかが見える</small></span></div>
+        <div class="imp-row"><span class="was">以前：煩雑</span><span class="now">不良の確認<small>写真と内容を見て OK／再仕入れ／キャンセルを選ぶだけ</small></span></div>
+        <div class="imp-row"><span class="was">以前：バラバラ</span><span class="now">オーダー総コストの可視化<small>1注文の総額が一目で</small></span></div>
+        <div class="imp-row"><span class="was">以前：複数番号</span><span class="now">オーダー番号の一本化／自社注文番号で検索<small>自分のショップの注文番号のまま探せる</small></span></div>
+        <div class="imp-row"><span class="was">以前：増減のみ</span><span class="now">残高履歴（明細付き）／履歴のDL<small>何にいくら使ったかが明細で分かる</small></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATUS LEGEND ===== -->
+<section class="sec-white">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Release Status</span>
+      <h2>公開状況について</h2>
+      <p>いま使える機能と、これから届く機能を正直に分けて表示しています。</p>
+    </div>
+    <div class="legend stagger">
+      <div class="leg"><span class="chip live"><span class="led"></span>提供中</span><p>契約直後から使えます。日本人対応や、改善ポイントの機能はすべてこちらです。</p></div>
+      <div class="leg"><span class="chip soon"><span class="led"></span>近日公開予定</span><p>すでに開発中で、まもなくお使いいただけます。ショップ連携・ハイブリッド在庫・粗利管理など。</p></div>
+      <div class="leg"><span class="chip plan"><span class="led"></span>順次公開予定</span><p>順番に追加していく機能です。発注目安の可視化・棚卸し・会計連携・税理士データなど。</p></div>
+    </div>
+    <p class="legend-note">※「近日公開予定」「順次公開予定」の機能は、開発状況により公開時期が前後する場合があります。</p>
+  </div>
+</section>
+
+<!-- ===== HOW TO START ===== -->
+<section class="sec-light" id="howto">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">How to Start</span>
+      <h2>はじめ方は、<br>シンプル。</h2>
+      <p>会員登録から利用開始まで、5ステップ。難しい準備はいりません。</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="snum">1</div>
+        <div class="sbody">
+          <span class="sactor you">お客様</span>
+          <h3>会員登録の審査をお申し込み</h3>
+          <p>まずは会員登録の審査をお申し込みください。</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="snum">2</div>
+        <div class="sbody">
+          <span class="sactor us">神戸バンブー代行</span>
+          <h3>アカウントを発行</h3>
+          <p>審査後、弊社にてアカウントを発行します。</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="snum">3</div>
+        <div class="sbody">
+          <span class="sactor you">お客様</span>
+          <h3>仕入れ依頼、または店舗連携でマッピング</h3>
+          <p>仕入れ依頼の操作をするか、ネットショップを連携して、仕入れと販売商品をマッピングします。</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="snum">4</div>
+        <div class="sbody">
+          <span class="sactor us">神戸バンブー代行</span>
+          <h3>商品を仕入れ</h3>
+          <p>ご依頼内容にもとづき、弊社が商品を仕入れます。</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="snum">5</div>
+        <div class="sbody">
+          <span class="sactor us">神戸バンブー代行</span>
+          <h3>検品・梱包・発送</h3>
+          <p>入荷したら検品し、問題がなければ梱包してお届け先へ発送します。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="sec-white" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2>よくあるご質問</h2>
+      <p>導入前に気になる点を、まとめました。</p>
+    </div>
+    <div class="faq reveal">
+      <details>
+        <summary><span class="q">Q</span>結局、あとからいろいろ追加になる料金はない？<span class="chev">&rsaquo;</span></summary>
+        <div class="faq-a">多彩なオプションをシンプルな料金体系に組み込み、できる限り分かりやすい表示を心がけています。基本は「①月額（無料プラン／スタンダードプラン）」「②国際運賃」「③代行手数料」「④必要に応じた各種オプション」、これだけで十分に発送いただけます。状況によってかかるその他の費用は、上の料金欄「その他の費用」、または<a href="https://mctcompany.net/ryoukin#sonotahiyou" target="_blank" rel="noopener">こちら</a>でご確認いただけます。</div>
+      </details>
+      <details>
+        <summary><span class="q">Q</span>スマホしか持っていないけど使える？<span class="chev">&rsaquo;</span></summary>
+        <div class="faq-a">仕入れ発注システムはスマホにも対応しておりますので、問題なくお使いいただけます。ただし、操作性や見やすさの面から、PC版のご利用を推奨しております。</div>
+      </details>
+      <details>
+        <summary><span class="q">Q</span>クレジットカードで支払いはできますか？<span class="chev">&rsaquo;</span></summary>
+        <div class="faq-a">お支払い方法は、PayPalと銀行振込からお選びいただけます。PayPalでのお支払いにより、クレジットカードのご利用が可能です。</div>
+      </details>
+      <details>
+        <summary><span class="q">Q</span>利用するには、まず何をしたらいい？<span class="chev">&rsaquo;</span></summary>
+        <div class="faq-a">会員登録には審査がございます。まずは審査をお申し込みいただき、個別面談の後にご利用可能となります。登録の審査申し込みは<a href="https://share.hsforms.com/1IXWWQMrUTYGnwg9T3xzplgrvgvr" target="_blank" rel="noopener">こちら</a>から。</div>
+      </details>
+      <p class="acc-note" style="color:var(--mist)">さらに詳しいFAQは<a href="https://mctcompany.net/faq" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700">こちら</a>をご覧ください。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta" id="contact">
+  <div class="wrap reveal">
+    <h2>次の一歩を、<br>ここから。</h2>
+    <p>もう決めている方は、会員登録の審査へ。迷っている方は、業務量や悩みをそのままLINE・Chatworkでご相談ください。今のやり方は変えなくて大丈夫です。</p>
+    <div class="cta-btns">
+      <a href="https://share.hsforms.com/1IXWWQMrUTYGnwg9T3xzplgrvgvr" target="_blank" rel="noopener" class="btn">会員登録の審査を申し込む</a>
+      <a href="#contact" class="btn ghost">まず相談する</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT MODAL ===== -->
+<div class="modal-overlay" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal">
+    <button class="modal-close" id="modalClose" aria-label="閉じる">&times;</button>
+    <h3 id="modalTitle">お問い合わせ</h3>
+    <p class="msub">ご都合のよい方法でお気軽に。<br>「うちの場合、どう変わる？」をそのままお聞かせください。</p>
+    <div class="contact-opts">
+      <a class="copt" href="https://lin.ee/51gfGsk" target="_blank" rel="noopener">
+        <span class="cico line">LINE</span>
+        <span class="ctxt"><b>LINEで相談する</b><small>ふだん使いのLINEで、気軽にやり取り</small></span>
+        <span class="carr">&rsaquo;</span>
+      </a>
+      <a class="copt" href="https://www.chatwork.com/mct_takemura" target="_blank" rel="noopener">
+        <span class="cico cw" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 5.5C4 4.67 4.67 4 5.5 4h13c.83 0 1.5.67 1.5 1.5v9c0 .83-.67 1.5-1.5 1.5H9l-4 3.4c-.5.42-1 .08-1-.5V5.5Z" fill="#fff"/>
+          </svg>
+        </span>
+        <span class="ctxt"><b>Chatworkで相談する</b><small>ビジネスチャットでしっかりやり取り</small></span>
+        <span class="carr">&rsaquo;</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap foot">
+    <div>
+      <div class="logo"><img src="images/logo.webp" alt="神戸バンブー代行"></div>
+      <address>
+        株式会社MCT COMPANY（神戸バンブー代行・中国輸入仕入れ代行）<br>
+        〒653-0038　神戸市長田区若松町1-5-7
+      </address>
+    </div>
+    <nav class="nav-links" id="footMenu" style="flex-direction:column;align-items:flex-end;gap:12px"></nav>
+    <div class="copy">© <span id="yr"></span> MCT COMPANY / 神戸バンブー代行. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  // year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  // footer menu mirrors the global (header) menu
+  (function(){
+    var hdr = document.querySelector('header .nav-links');
+    var foot = document.getElementById('footMenu');
+    if(hdr && foot){
+      foot.innerHTML = '';
+      hdr.querySelectorAll('a').forEach(function(a){
+        var c = a.cloneNode(true);
+        c.classList.remove('btn');
+        foot.appendChild(c);
+      });
+    }
+  })();
+  // scroll reveal (reveal + stagger)
+  (function(){
+    var els = document.querySelectorAll('.reveal, .stagger');
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}
+      });
+    },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e);});
+  })();
+
+  // GA4 click events (audit application / contact / line / chatwork)
+  (function(){
+    if(typeof gtag !== 'function') return;
+    document.addEventListener('click', function(e){
+      var a = e.target.closest && e.target.closest('a');
+      if(!a) return;
+      var href = a.getAttribute('href') || '';
+      if(href.indexOf('share.hsforms.com') !== -1){
+        gtag('event', 'click_audit_application', {link_url: href});
+      } else if(href.indexOf('lin.ee') !== -1){
+        gtag('event', 'click_line', {link_url: href});
+      } else if(href.indexOf('chatwork.com') !== -1){
+        gtag('event', 'click_chatwork', {link_url: href});
+      } else if(href.slice(-8) === '#contact'){
+        gtag('event', 'open_contact_modal');
+      }
+    });
+  })();
+
+  // mobile menu (mirrors the global/header menu)
+  (function(){
+    var toggle = document.getElementById('navToggle');
+    var menu = document.getElementById('mobileMenu');
+    var hdr = document.querySelector('header .nav-links');
+    if(!toggle || !menu || !hdr) return;
+    hdr.querySelectorAll('a').forEach(function(a){ menu.appendChild(a.cloneNode(true)); });
+    function openM(){menu.classList.add('open');toggle.classList.add('active');toggle.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+    function closeM(){menu.classList.remove('open');toggle.classList.remove('active');toggle.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+    toggle.addEventListener('click', function(){ menu.classList.contains('open') ? closeM() : openM(); });
+    menu.addEventListener('click', function(e){ if(e.target.closest('a')) closeM(); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && menu.classList.contains('open')) closeM(); });
+  })();
+
+  (function(){
+    var overlay = document.getElementById('contactModal');
+    if(!overlay) return;
+    var closeBtn = document.getElementById('modalClose');
+    function open(){
+      overlay.classList.add('open');
+      overlay.setAttribute('aria-hidden','false');
+      document.body.style.overflow = 'hidden';
+    }
+    function close(){
+      overlay.classList.remove('open');
+      overlay.setAttribute('aria-hidden','true');
+      document.body.style.overflow = '';
+    }
+    // any link pointing to #contact opens the modal (covers header, hero, pricing, footer clone)
+    document.addEventListener('click', function(e){
+      var a = e.target.closest && e.target.closest('a[href$="#contact"]');
+      if(a){ e.preventDefault(); open(); }
+    });
+    closeBtn.addEventListener('click', close);
+    overlay.addEventListener('click', function(e){ if(e.target === overlay) close(); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && overlay.classList.contains('open')) close(); });
+  })();
+
+  (function(){
+    var el = document.getElementById('breakNum');
+    if(!el) return;
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var target = parseInt(el.textContent, 10) || 0;
+    if(reduce || !('IntersectionObserver' in window)){el.textContent = target; return;}
+    var done = false;
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting && !done){
+          done = true; io.unobserve(en.target);
+          var start = null, dur = 1100;
+          function step(ts){
+            if(!start) start = ts;
+            var p = Math.min((ts - start) / dur, 1);
+            var eased = 1 - Math.pow(1 - p, 3);
+            el.textContent = Math.round(eased * target);
+            if(p < 1) requestAnimationFrame(step);
+          }
+          el.textContent = '0';
+          requestAnimationFrame(step);
+        }
+      });
+    },{threshold:.5});
+    io.observe(el);
+  })();
+</script>
+</body>
+</html>
