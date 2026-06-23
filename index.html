@@ -340,6 +340,7 @@
     color:#fff;font-size:14.5px;font-weight:500;text-align:center;
   }
   .guarantee b{font-family:var(--latin);letter-spacing:.06em;font-size:18px;color:var(--orange)}
+  .sec-white .guarantee{color:var(--ink)}
   .price-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:34px;align-items:stretch}
   @media(max-width:1000px){.price-grid{grid-template-columns:1fr;gap:30px;max-width:440px;margin-left:auto;margin-right:auto}}
   .pcard{
@@ -375,6 +376,10 @@
   .pfee .l{font-size:12px;color:var(--mist);display:block;margin-bottom:2px}
   .pfee .v{font-family:var(--latin);font-size:32px;color:var(--orange);line-height:1.1}
   .pfee .v small{font-family:var(--body);font-size:14px;color:var(--ink);font-weight:700}
+  .pfee2{display:grid;grid-template-columns:1fr 1fr;gap:0;padding-left:8px;padding-right:8px}
+  .pfee2 .fcell{padding:0 4px}
+  .pfee2 .fcell+.fcell{border-left:1px solid var(--line-l)}
+  .pfee2 .v{font-size:25px}
   .pinc{list-style:none;display:flex;flex-direction:column;gap:9px;margin:0 0 22px}
   .pinc li{display:flex;gap:9px;align-items:flex-start;font-size:13.5px;color:var(--ink)}
   .pinc li::before{content:"\2713";color:var(--orange);font-weight:900;flex-shrink:0}
@@ -681,6 +686,46 @@
     .btn:hover,.pain:hover,.feat:hover{transform:none}
   }
 </style>
+<style>
+  /* ===== shipping section ===== */
+  .ship2{max-width:940px;margin:30px auto 0}
+  .ship2-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .ship-card{background:var(--paper);border:1px solid var(--line-l);border-radius:16px;padding:28px 26px;position:relative}
+  .ship-card.biz{border-color:rgba(240,100,10,.4)}
+  .ship-card .sc-plan{font-size:15px;font-weight:900;color:var(--ink)}
+  .ship-card .sc-sub{font-size:12px;color:var(--mist);margin:5px 0 18px}
+  .ship-card .sc-badge{position:absolute;top:18px;right:18px;background:var(--orange);color:#fff;font-size:11px;font-weight:800;padding:4px 11px;border-radius:999px}
+  .sc-rate{padding:16px 0;border-top:1px solid var(--line-l)}
+  .sc-rate:first-of-type{border-top:none}
+  .scr-top{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+  .scr-l{font-size:13.5px;font-weight:700;color:var(--ink)}
+  .scr-v{font-family:var(--latin);font-size:14.5px;color:var(--ink);font-weight:700;white-space:nowrap;text-align:right}
+  .ship-card.biz .scr-v{color:var(--orange)}
+  .scr-sz{font-size:11.5px;color:var(--mist);margin-top:7px;line-height:1.65}
+  .ship-note2{font-size:12.5px;color:var(--mist);line-height:1.8;margin:16px 0 0}
+  .ship-big{margin-top:28px}
+  .sbig-h{font-size:15px;font-weight:900;color:var(--ink);margin-bottom:2px}
+  .sbig-cap{font-size:12.5px;font-weight:700;color:var(--mist);margin:16px 0 6px}
+  .sbig-scroll{overflow-x:auto}
+  table.sbig{width:100%;border-collapse:collapse;font-size:13px;min-width:420px}
+  table.sbig th,table.sbig td{border:1px solid var(--line-l);padding:9px 10px;text-align:center;white-space:nowrap;color:var(--ink)}
+  table.sbig th{background:var(--paper);font-weight:700}
+  table.sbig td.lbl{text-align:left;font-weight:700}
+  table.sbig tbody td:not(.lbl){font-family:var(--latin);color:var(--ink);font-weight:600}
+  .ship-acc{margin-top:26px}
+  .ship-acc details{border:1px solid var(--line-l);border-radius:12px;background:#fff;overflow:hidden}
+  .ship-acc summary{list-style:none;cursor:pointer;padding:16px 20px;font-weight:700;font-size:14px;color:var(--ink);display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .ship-acc summary::-webkit-details-marker{display:none}
+  .ship-acc summary .chev{color:var(--orange);font-size:20px;line-height:1;transition:transform .25s ease}
+  .ship-acc details[open] summary .chev{transform:rotate(90deg)}
+  .ship-acc-body{padding:2px 20px 18px}
+  .sdl .sdi{padding:11px 0;border-top:1px solid var(--line-l)}
+  .sdl .sdi:first-child{border-top:none}
+  .sdl .sdt{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:3px}
+  .sdl .sdd{font-size:12.5px;color:var(--mist);line-height:1.75}
+  @media(max-width:680px){.ship2-grid{grid-template-columns:1fr}}
+  @media(prefers-reduced-motion:reduce){.ship-acc summary .chev{transition:none}}
+</style>
 </head>
 <body>
 
@@ -691,6 +736,7 @@
     <nav class="nav-links">
       <a href="#flagship">目玉機能</a>
       <a href="#pricing">料金</a>
+      <a href="#shipping">送料</a>
       <a href="#leadtime">納期</a>
       <a href="#quality">現場品質</a>
       <a href="#voices">お客様の声</a>
@@ -925,6 +971,62 @@
   </div>
 </section>
 
+<!-- ===== IMPROVE ===== -->
+<section class="sec-light" id="improve">
+  <div class="wrap">
+    <div class="sec-head reveal" style="max-width:46em">
+      <span class="eyebrow">Now Available</span>
+      <div class="imp-head">
+        <h2>「連絡しないとできなかった」が、<br>なくなりました。</h2>
+        <span class="imp-allnow reveal">すべて提供中・契約直後から使えます</span>
+      </div>
+      <p>以前のシステムでは弊社への連絡が必要だった操作も、見えにくかった情報も、ぜんぶマイページで完結します。</p>
+    </div>
+
+    <div class="imp-cols stagger">
+      <div class="imp-card">
+        <span class="cap">SELF-SERVE</span>
+        <h3>自分で完結できる</h3>
+        <p class="sub">これまで依頼が必要だった操作が、ワンクリックに。</p>
+        <div class="imp-row"><span class="was">以前：要連絡</span><span class="now">同梱依頼<small>マイページから簡単に</small></span></div>
+        <div class="imp-row"><span class="was">以前：要相談</span><span class="now">一部先行発送の依頼<small>必要な分だけ先に発送</small></span></div>
+        <div class="imp-row"><span class="was">以前：要連絡</span><span class="now">お届け先の変更<small>梱包前ならいつでも自分で</small></span></div>
+        <div class="imp-row"><span class="was">以前：要連絡</span><span class="now">発送元情報の変更<small>梱包前ならいつでも自分で</small></span></div>
+        <div class="imp-row"><span class="was">以前：毎回指定</span><span class="now">オプションのデフォルト設定<small>一度決めれば自動で適用</small></span></div>
+        <div class="imp-row"><span class="was">以前：運用で調整</span><span class="now">国際運賃の自動支払い ON / OFF<small>自分で切り替え可能</small></span></div>
+      </div>
+
+      <div class="imp-card">
+        <span class="cap">VISIBILITY</span>
+        <h3>一目で分かる</h3>
+        <p class="sub">見えにくかった情報が、画面ですぐ把握できます。</p>
+        <div class="imp-row"><span class="was">以前：不透明</span><span class="now">再手配時の進捗管理<small>どこまで進んだかが見える</small></span></div>
+        <div class="imp-row"><span class="was">以前：煩雑</span><span class="now">不良の確認<small>写真と内容を見て OK／再仕入れ／キャンセルを選ぶだけ</small></span></div>
+        <div class="imp-row"><span class="was">以前：バラバラ</span><span class="now">オーダー総コストの可視化<small>1注文の総額が一目で</small></span></div>
+        <div class="imp-row"><span class="was">以前：複数番号</span><span class="now">オーダー番号の一本化／自社注文番号で検索<small>自分のショップの注文番号のまま探せる</small></span></div>
+        <div class="imp-row"><span class="was">以前：増減のみ</span><span class="now">残高履歴（明細付き）／履歴のDL<small>何にいくら使ったかが明細で分かる</small></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATUS LEGEND ===== -->
+<section class="sec-white">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Release Status</span>
+      <h2>公開状況について</h2>
+      <p>いま使える機能と、これから届く機能を正直に分けて表示しています。</p>
+    </div>
+    <div class="legend stagger">
+      <div class="leg"><span class="chip live"><span class="led"></span>提供中</span><p>契約直後から使えます。日本人対応・ハイブリッド在庫・粗利管理・販売前シミュレーションなど、改善ポイントの機能はすべてこちらです。</p></div>
+      <div class="leg"><span class="chip soon"><span class="led"></span>近日公開予定</span><p>すでに開発中で、まもなくお使いいただけます。Shopify連携・改善提案など。</p></div>
+      <div class="leg"><span class="chip plan"><span class="led"></span>順次公開予定</span><p>順番に追加していく機能です。発注目安の可視化・棚卸し・会計連携・税理士データなど。</p></div>
+    </div>
+    <p class="legend-note">※「近日公開予定」「順次公開予定」の機能は、開発状況により公開時期が前後する場合があります。</p>
+  </div>
+</section>
+
 <!-- ===== PRICING ===== -->
 <section class="sec-deep" id="pricing">
   <div class="wrap">
@@ -941,9 +1043,9 @@
       <div class="pcard free">
         <div class="pname">無料プラン</div>
         <div class="pprice">¥0<span class="unit">/月</span></div>
-        <div class="pfee">
-          <span class="l">代行手数料</span>
-          <span class="v">15元<small>/点</small></span>
+        <div class="pfee pfee2">
+          <div class="fcell"><span class="l">代行手数料</span><span class="v">15元<small>/点</small></span></div>
+          <div class="fcell"><span class="l">転送手数料</span><span class="v">8元<small>/点</small></span></div>
         </div>
         <ul class="pinc">
           <li>ショップ連携・受注管理・在庫管理</li>
@@ -953,7 +1055,7 @@
         <div class="pship">
           <div class="pshead">国際送料</div>
           <div class="prow"><b>佐川</b><span>45元〜（+0.5kgごと +15元）</span></div>
-          <div class="prow"><b>DM便</b><span>26元〜（+0.1kgごと +5元）</span></div>
+          <div class="prow"><b>DM便</b><span>26元〜（+0.1kgごと +6元）</span></div>
         </div>
         <a href="#contact" class="btn">このプランで相談する</a>
       </div>
@@ -964,9 +1066,9 @@
         <div class="pname">スタンダードプラン</div>
         <div class="pprice"><span class="was">¥2,980</span>¥1,980<span class="unit">/月</span></div>
         <span class="pcamp">今だけ ¥1,000 OFF</span>
-        <div class="pfee">
-          <span class="l">代行手数料</span>
-          <span class="v">15元<small>/点</small></span>
+        <div class="pfee pfee2">
+          <div class="fcell"><span class="l">代行手数料</span><span class="v">15元<small>/点</small></span></div>
+          <div class="fcell"><span class="l">転送手数料</span><span class="v">8元<small>/点</small></span></div>
         </div>
         <div class="phi">粗利管理 ＋ 販売前の利益シミュレーションが使える</div>
         <ul class="pinc">
@@ -979,7 +1081,7 @@
         <div class="pship">
           <div class="pshead">国際送料</div>
           <div class="prow"><b>佐川</b><span>45元〜（+0.5kgごと +15元）</span></div>
-          <div class="prow"><b>DM便</b><span>26元〜（+0.1kgごと +5元）</span></div>
+          <div class="prow"><b>DM便</b><span>26元〜（+0.1kgごと +6元）</span></div>
         </div>
         <a href="#contact" class="btn">このプランで相談する</a>
       </div>
@@ -988,9 +1090,9 @@
       <div class="pcard biz">
         <div class="pname">ビジネスプラン</div>
         <div class="pprice">¥29,800<span class="unit">/月</span></div>
-        <div class="pfee">
-          <span class="l">代行手数料</span>
-          <span class="v">13元<small>/点</small></span>
+        <div class="pfee pfee2">
+          <div class="fcell"><span class="l">代行手数料</span><span class="v">13元<small>/点</small></span></div>
+          <div class="fcell"><span class="l">転送手数料</span><span class="v">6元<small>/点</small></span></div>
         </div>
         <div class="phi">スタンダードの全機能 ＋ 手数料・送料が割引</div>
         <div class="pbreak">月およそ <b id="breakNum">134</b> オーダー以上でおトク</div>
@@ -1028,6 +1130,7 @@
         </thead>
         <tbody>
           <tr><th>代行手数料</th><td class="val">15元/点</td><td class="val">15元/点</td><td class="val" style="color:var(--orange);font-weight:700">13元/点</td></tr>
+          <tr><th>転送手数料</th><td class="val">8元/点</td><td class="val">8元/点</td><td class="val" style="color:var(--orange);font-weight:700">6元/点</td></tr>
           <tr><th>ショップ連携完全自動化</th><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
           <tr><th>受注の一括管理・発注</th><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
           <tr><th>発送通知の自動反映</th><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
@@ -1097,6 +1200,77 @@
           <div class="prow2"><div class="pr-head"><b>検査費用</b><span class="pr-fee">実費</span></div><div class="pr-desc">税関や出荷前に検査が必要になった場合は、ユーザー様のご負担となります。</div></div>
         </div>
       </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SHIPPING ===== -->
+<section class="sec-white" id="shipping">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Shipping</span>
+      <h2>国際送料も、<br>業界最安を保証。</h2>
+    </div>
+    <div class="guarantee reveal"><b>業界最安保証</b><span>他社よりも高ければ、ぜひご相談ください。</span></div>
+
+    <div class="ship2 reveal">
+      <div class="ship2-grid">
+        <div class="ship-card">
+          <div class="sc-plan">無料・スタンダードプラン</div>
+          <div class="sc-sub">直送（佐川）／ DM便 ／ 電池入り商品</div>
+          <div class="sc-rate"><div class="scr-top"><span class="scr-l">直送（佐川）</span><span class="scr-v">0.5kgまで 45元〜</span></div><div class="scr-sz">以降 +0.5kgごとに +15元 ／ 5kg・3辺100cmまで</div></div>
+          <div class="sc-rate"><div class="scr-top"><span class="scr-l">DM便</span><span class="scr-v">0.1kgまで 26元〜</span></div><div class="scr-sz">以降 +0.1kgごとに +6元 ／ 1kg・A4・厚さ2.5cmまで</div></div>
+          <div class="sc-rate"><div class="scr-top"><span class="scr-l">電池入り 直送（佐川）</span><span class="scr-v">0.5kgまで 60元〜</span></div><div class="scr-sz">以降 +0.5kgごとに +20元 ／ 5kg・3辺100cmまで</div></div>
+        </div>
+        <div class="ship-card biz">
+          <div class="sc-badge">送料割引</div>
+          <div class="sc-plan">ビジネスプラン</div>
+          <div class="sc-sub">直送（佐川）／ DM便 ／ 電池入り商品</div>
+          <div class="sc-rate"><div class="scr-top"><span class="scr-l">直送（佐川）</span><span class="scr-v">0.5kgまで 38元〜</span></div><div class="scr-sz">以降 +0.5kgごとに +10元 ／ 5kg・3辺100cmまで</div></div>
+          <div class="sc-rate"><div class="scr-top"><span class="scr-l">DM便</span><span class="scr-v">0.1kgまで 23元〜</span></div><div class="scr-sz">以降 +0.1kgごとに +3元 ／ 1kg・A4・厚さ2.5cmまで</div></div>
+          <div class="sc-rate"><div class="scr-top"><span class="scr-l">電池入り 直送（佐川）</span><span class="scr-v">0.5kgまで 50元〜</span></div><div class="scr-sz">以降 +0.5kgごとに +15元 ／ 5kg・3辺100cmまで</div></div>
+        </div>
+      </div>
+      <p class="ship-note2">※ 沖縄は +100元。離島は後日、物流からの請求ベースで実費。電池入り商品は深圳までの中国国内運賃が別途実費となります。<br>※ 5.5kg以上（全プラン共通）：直送（佐川）5〜5.5kg 210元、以降 +0.5kgごとに +15元。</p>
+
+      <div class="ship-big">
+        <div class="sbig-h">大型貨物（21kg〜）</div>
+        <div class="sbig-cap">無在庫・全プラン共通</div>
+        <div class="sbig-scroll">
+          <table class="sbig">
+            <thead><tr><th></th><th>21〜50kg</th><th>51〜100kg</th><th>101〜300kg</th><th>301kg〜</th></tr></thead>
+            <tbody><tr><td class="lbl">エコノミー空輸</td><td>16元/kg</td><td>15元/kg</td><td>14元/kg</td><td>13元/kg</td></tr></tbody>
+          </table>
+        </div>
+        <div class="sbig-cap">有在庫</div>
+        <div class="sbig-scroll">
+          <table class="sbig">
+            <thead><tr><th></th><th>21〜50kg</th><th>51〜100kg</th><th>101〜300kg</th><th>301kg〜</th></tr></thead>
+            <tbody>
+              <tr><td class="lbl">空輸</td><td>18元/kg</td><td>17元/kg</td><td>16元/kg</td><td>15元/kg</td></tr>
+              <tr><td class="lbl">エコノミー</td><td>16元/kg</td><td>15元/kg</td><td>14元/kg</td><td>13元/kg</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="ship-acc">
+        <details>
+          <summary>配送の共通事項・諸費用を見る<span class="chev">&rsaquo;</span></summary>
+          <div class="ship-acc-body">
+            <div class="sdl">
+              <div class="sdi"><div class="sdt">配送業者</div><div class="sdd">佐川急便（状況により宅配業者が変更になる場合があります）</div></div>
+              <div class="sdi"><div class="sdt">納期</div><div class="sdd">空輸：上海から発送2〜3日で追跡反映／エコノミー：上海から発送4〜5日で追跡反映</div></div>
+              <div class="sdi"><div class="sdt">体積重量</div><div class="sdd">実重量と体積重量を比べて重い方で計算します。<br>例）実重量10kg、体積50cm×50cm×45cmの場合 → 体積重量＝50×50×45÷6000＝18.75kg。18.75kgで計算します。</div></div>
+              <div class="sdi"><div class="sdt">サイズ制限</div><div class="sdd">1箱 3辺160cm・50kgまで（木箱不可）</div></div>
+              <div class="sdi"><div class="sdt">北海道・沖縄</div><div class="sdd">北海道：追加費用 +5元/kg（最低追加費用50元）／沖縄：追加費用 +10元/kg（最低追加費用80元）</div></div>
+              <div class="sdi"><div class="sdt">3辺160cmオーバー貨物</div><div class="sdd">北海道・沖縄以外は可能。1箱 3辺260cm・50kgまで（木箱不可）。宛先が法人の場合 +2元/kg、個人の場合 +5元/kg。</div></div>
+              <div class="sdi"><div class="sdt">関税・デポジット</div><div class="sdd">関税は上海での立替えになるためデポジットが必要です。関税立替え手数料1,500円（関税が3万円を超える場合は関税の5%）。リアルタイム口座をお持ちの場合はデポジット・関税手数料はかかりません。宛先が個人の場合は +2〜5元/kg となる場合があります。</div></div>
+              <div class="sdi"><div class="sdt">通関書類作成手数料</div><div class="sdd">1〜30品目 1,500円/件／31〜50品目 +1,000円／51〜60品目 +2,000円／61〜80品目 +3,000円／以降 +20品目ごとに +1,000円</div></div>
+            </div>
+          </div>
+        </details>
+      </div>
     </div>
   </div>
 </section>
@@ -1276,62 +1450,6 @@
         <p>これからも、最良のサービスを最安で、最速で──ではなく、「売上が伸びれば、事業に集中できる」。そんな状態を一緒につくる。それが、神戸バンブー代行の使命です。どうか、あなたの挑戦に、私たちを加えてください。</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ===== IMPROVE ===== -->
-<section class="sec-light" id="improve">
-  <div class="wrap">
-    <div class="sec-head reveal" style="max-width:46em">
-      <span class="eyebrow">Now Available</span>
-      <div class="imp-head">
-        <h2>「連絡しないとできなかった」が、<br>なくなりました。</h2>
-        <span class="imp-allnow reveal">すべて提供中・契約直後から使えます</span>
-      </div>
-      <p>以前のシステムでは弊社への連絡が必要だった操作も、見えにくかった情報も、ぜんぶマイページで完結します。</p>
-    </div>
-
-    <div class="imp-cols stagger">
-      <div class="imp-card">
-        <span class="cap">SELF-SERVE</span>
-        <h3>自分で完結できる</h3>
-        <p class="sub">これまで依頼が必要だった操作が、ワンクリックに。</p>
-        <div class="imp-row"><span class="was">以前：要連絡</span><span class="now">同梱依頼<small>マイページから簡単に</small></span></div>
-        <div class="imp-row"><span class="was">以前：要相談</span><span class="now">一部先行発送の依頼<small>必要な分だけ先に発送</small></span></div>
-        <div class="imp-row"><span class="was">以前：要連絡</span><span class="now">お届け先の変更<small>梱包前ならいつでも自分で</small></span></div>
-        <div class="imp-row"><span class="was">以前：要連絡</span><span class="now">発送元情報の変更<small>梱包前ならいつでも自分で</small></span></div>
-        <div class="imp-row"><span class="was">以前：毎回指定</span><span class="now">オプションのデフォルト設定<small>一度決めれば自動で適用</small></span></div>
-        <div class="imp-row"><span class="was">以前：運用で調整</span><span class="now">国際運賃の自動支払い ON / OFF<small>自分で切り替え可能</small></span></div>
-      </div>
-
-      <div class="imp-card">
-        <span class="cap">VISIBILITY</span>
-        <h3>一目で分かる</h3>
-        <p class="sub">見えにくかった情報が、画面ですぐ把握できます。</p>
-        <div class="imp-row"><span class="was">以前：不透明</span><span class="now">再手配時の進捗管理<small>どこまで進んだかが見える</small></span></div>
-        <div class="imp-row"><span class="was">以前：煩雑</span><span class="now">不良の確認<small>写真と内容を見て OK／再仕入れ／キャンセルを選ぶだけ</small></span></div>
-        <div class="imp-row"><span class="was">以前：バラバラ</span><span class="now">オーダー総コストの可視化<small>1注文の総額が一目で</small></span></div>
-        <div class="imp-row"><span class="was">以前：複数番号</span><span class="now">オーダー番号の一本化／自社注文番号で検索<small>自分のショップの注文番号のまま探せる</small></span></div>
-        <div class="imp-row"><span class="was">以前：増減のみ</span><span class="now">残高履歴（明細付き）／履歴のDL<small>何にいくら使ったかが明細で分かる</small></span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== STATUS LEGEND ===== -->
-<section class="sec-white">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Release Status</span>
-      <h2>公開状況について</h2>
-      <p>いま使える機能と、これから届く機能を正直に分けて表示しています。</p>
-    </div>
-    <div class="legend stagger">
-      <div class="leg"><span class="chip live"><span class="led"></span>提供中</span><p>契約直後から使えます。日本人対応・ハイブリッド在庫・粗利管理・販売前シミュレーションなど、改善ポイントの機能はすべてこちらです。</p></div>
-      <div class="leg"><span class="chip soon"><span class="led"></span>近日公開予定</span><p>すでに開発中で、まもなくお使いいただけます。Shopify連携・改善提案など。</p></div>
-      <div class="leg"><span class="chip plan"><span class="led"></span>順次公開予定</span><p>順番に追加していく機能です。発注目安の可視化・棚卸し・会計連携・税理士データなど。</p></div>
-    </div>
-    <p class="legend-note">※「近日公開予定」「順次公開予定」の機能は、開発状況により公開時期が前後する場合があります。</p>
   </div>
 </section>
 
