@@ -144,6 +144,15 @@
   .hero-cta{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
   .hero-note{margin-top:18px;font-size:13px;color:rgba(255,255,255,.55)}
 
+  /* hero logo (navy logo on a light plate for contrast on the dark hero) */
+  .hero-logo{
+    display:inline-block;background:#fff;
+    padding:10px 16px;border-radius:12px;
+    box-shadow:0 10px 28px rgba(0,0,0,.28);
+  }
+  .hero-logo img{height:52px;width:auto;display:block}
+  @media(max-width:640px){.hero-logo{padding:8px 13px}.hero-logo img{height:42px}}
+
   /* hero shot placeholder */
   .shot{
     border-radius:16px;overflow:hidden;
@@ -272,8 +281,24 @@
   .feat-body{flex:1}
   .feat-body .ttl{font-weight:700;font-size:15.5px;color:var(--ink);margin-bottom:4px}
   .feat-body .desc{font-size:13.5px;color:var(--mist);line-height:1.65}
+  .feat-body .desc b{color:var(--ink);font-weight:800}
+  .feat-body .feat-note{margin-top:8px;font-size:12px;color:var(--mist);opacity:.9}
   .feat-status{flex-shrink:0;padding-top:2px}
   @media(max-width:520px){.feat{flex-direction:column;gap:10px}}
+
+  /* featured / hero feature */
+  .feat.featured{
+    background:linear-gradient(180deg,rgba(240,100,10,.07),rgba(240,100,10,.02));
+    border-color:rgba(240,100,10,.5);
+    box-shadow:0 10px 30px rgba(240,100,10,.11);
+  }
+  .feat.featured:hover{box-shadow:0 16px 38px rgba(240,100,10,.17)}
+  .feat .feat-tag{
+    display:inline-block;margin-bottom:8px;
+    font-size:11px;font-weight:800;letter-spacing:.04em;color:#fff;
+    background:var(--orange);padding:3px 11px;border-radius:999px;
+  }
+  .feat.featured .ttl{font-size:16.5px}
 
   /* ---------- improvement (self-serve + visibility) ---------- */
   .imp-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
@@ -627,7 +652,7 @@
 <section class="hero" id="top">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow hero-seq d1">China Import &middot; BambooDaikou</span>
+      <div class="hero-logo hero-seq d1"><img src="images/logo.webp" alt="神戸バンブー代行"></div>
       <h1 class="hero-seq d2">売れるほど、<br><span class="hl">ラクになる。</span></h1>
       <p class="lead hero-seq d3">神戸バンブー代行の新しい総合仕入れ管理システム。<br>有在庫とのハイブリッド販売にも<strong style="color:#fff">完全対応！</strong></p>
       <div class="hero-cta hero-seq d4">
@@ -676,7 +701,7 @@
     </div>
     <div class="pain-grid stagger">
       <div class="pain"><div class="n">01</div><h3>売れるほど<br>作業に追われる</h3><p>受注のたびに仕入れと管理。肝心のリサーチや売上を伸ばす時間が、どんどん作りづらくなる。</p></div>
-      <div class="pain"><div class="n">02</div><h3>利益が<br>把握しきれない</h3><p>実際どれくらい儲かっているのか。コストが入り組んで、利益の管理が煩雑になりがち。</p></div>
+      <div class="pain"><div class="n">02</div><h3>実際の利益って<br>どれくらい？？</h3><p>売上は増えても、仕入れ・運賃・手数料が入り組んで、手元にいくら残るのか見えない。『思ったより残っていなかった』を防ぎたい。</p></div>
       <div class="pain"><div class="n">03</div><h3>在庫も使って<br>攻めたい</h3><p>売れ筋は在庫を積んで、無在庫とハイブリッドで売りたい。でも在庫管理まで手が回らない。</p></div>
       <div class="pain"><div class="n">04</div><h3>中国側との<br>やり取りが不安</h3><p>担当者とのやり取りが要領を得ない。認識のズレが、後々のトラブルにつながらないか心配。</p></div>
     </div>
@@ -713,8 +738,9 @@
           <div class="feat-body">
             <div class="ttl">ネットショップ連携（BASE / Shopify / STORES）</div>
             <div class="desc">ショップで売れた注文の取り込みから発注、発送通知のショップ反映まで完全自動化。注文が増えても、発注の手間は比例して増えません。</div>
+            <div class="feat-note">※ BASE 提供中 ／ Shopify 近日公開 ／ STORES 順次公開予定</div>
           </div>
-          <div class="feat-status"><span class="chip soon"><span class="led"></span>近日公開予定</span></div>
+          <div class="feat-status"><span class="chip live"><span class="led"></span>提供中</span></div>
         </div>
       </div>
     </div>
@@ -729,22 +755,30 @@
       <div class="feat-list">
         <div class="feat">
           <div class="feat-body">
-            <div class="ttl">粗利管理 ／ 目標粗利率の設定 ／ 改善提案</div>
-            <div class="desc">オーダーごとの利益・利益率を可視化。目標の粗利率を設定すると、未達のオーダーを抽出して改善のヒントを提示します。値付け・仕入れ判断の武器に。</div>
+            <div class="ttl">粗利管理 ／ 目標粗利率の設定</div>
+            <div class="desc">オーダーごとの利益・利益率を可視化。月次の売上・コスト・粗利・粗利率が一目で分かります。ショップごとに目標粗利率を設定でき、値付けや仕入れ判断の武器になります。</div>
+          </div>
+          <div class="feat-status"><span class="chip live"><span class="led"></span>提供中</span></div>
+        </div>
+        <div class="feat">
+          <div class="feat-body">
+            <div class="ttl">改善提案</div>
+            <div class="desc">目標の粗利率に届かないオーダーを自動で抽出し、利益を改善するためのヒントを提示します。</div>
           </div>
           <div class="feat-status"><span class="chip soon"><span class="led"></span>近日公開予定</span></div>
         </div>
-        <div class="feat">
+        <div class="feat featured">
           <div class="feat-body">
-            <div class="ttl">会計ソフト連携</div>
-            <div class="desc">取引データが会計側へ流れ、経理の入力作業をなくしていきます。</div>
+            <div class="feat-tag">注目機能</div>
+            <div class="ttl">販売前の利益シミュレーション</div>
+            <div class="desc">プラットフォーム手数料まで含めた<b>フルコストを自動計算</b>。設定した参考粗利率から逆算して、利益の出る売価をその場で決定できます。決めた値付けはそのまま <b>BASE・Shopify にマッピングして出品</b>。「いくらで売れば、いくら残るか」を、仕入れる前に固められます。</div>
           </div>
-          <div class="feat-status"><span class="chip plan"><span class="led"></span>順次公開予定</span></div>
+          <div class="feat-status"><span class="chip live"><span class="led"></span>提供中</span></div>
         </div>
         <div class="feat">
           <div class="feat-body">
-            <div class="ttl">税理士にそのまま渡せる月次データDL</div>
-            <div class="desc">毎月のデータをワンクリックで出力。顧問税理士への受け渡しが一発で済みます。</div>
+            <div class="ttl">会計ソフト連携 ／ 税理士にそのまま渡せる月次データDL</div>
+            <div class="desc">取引データが会計側へ流れ、経理の入力作業をなくしていきます。毎月のデータはワンクリックで出力でき、顧問税理士への受け渡しも一発です。</div>
           </div>
           <div class="feat-status"><span class="chip plan"><span class="led"></span>順次公開予定</span></div>
         </div>
@@ -764,7 +798,7 @@
             <div class="ttl">無在庫 × 有在庫のハイブリッド完全対応</div>
             <div class="desc">売れ筋は在庫から即出荷、その他は無在庫で。1つの注文の中で「在庫から」と「新規仕入れ」を混ぜることもできます。</div>
           </div>
-          <div class="feat-status"><span class="chip soon"><span class="led"></span>近日公開予定</span></div>
+          <div class="feat-status"><span class="chip live"><span class="led"></span>提供中</span></div>
         </div>
         <div class="feat">
           <div class="feat-body">
@@ -1163,8 +1197,8 @@
       <p>いま使える機能と、これから届く機能を正直に分けて表示しています。</p>
     </div>
     <div class="legend stagger">
-      <div class="leg"><span class="chip live"><span class="led"></span>提供中</span><p>契約直後から使えます。日本人対応や、改善ポイントの機能はすべてこちらです。</p></div>
-      <div class="leg"><span class="chip soon"><span class="led"></span>近日公開予定</span><p>すでに開発中で、まもなくお使いいただけます。ショップ連携・ハイブリッド在庫・粗利管理など。</p></div>
+      <div class="leg"><span class="chip live"><span class="led"></span>提供中</span><p>契約直後から使えます。日本人対応・ハイブリッド在庫・粗利管理・販売前シミュレーションなど、改善ポイントの機能はすべてこちらです。</p></div>
+      <div class="leg"><span class="chip soon"><span class="led"></span>近日公開予定</span><p>すでに開発中で、まもなくお使いいただけます。Shopify連携・改善提案など。</p></div>
       <div class="leg"><span class="chip plan"><span class="led"></span>順次公開予定</span><p>順番に追加していく機能です。発注目安の可視化・棚卸し・会計連携・税理士データなど。</p></div>
     </div>
     <p class="legend-note">※「近日公開予定」「順次公開予定」の機能は、開発状況により公開時期が前後する場合があります。</p>
