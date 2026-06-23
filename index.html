@@ -352,6 +352,22 @@
     background:var(--orange);color:#fff;font-size:12px;font-weight:700;
     padding:6px 18px;border-radius:999px;white-space:nowrap;box-shadow:0 6px 16px rgba(240,100,10,.4);
   }
+  .pop-free{
+    position:absolute;top:-16px;right:-8px;z-index:3;
+    width:62px;height:62px;border-radius:50%;
+    background:var(--navy);color:#fff;border:2px solid #fff;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;line-height:1.05;
+    transform:rotate(-12deg);box-shadow:0 7px 18px rgba(11,21,56,.45);
+  }
+  .pop-free .s{font-size:10px;font-weight:800;opacity:.92}
+  .pop-free .b{font-size:16px;font-weight:900;letter-spacing:.02em}
+  .pop{
+    position:absolute;top:-16px;right:-12px;width:62px;height:62px;border-radius:50%;
+    background:var(--orange);color:#fff;display:flex;align-items:center;justify-content:center;
+    text-align:center;font-size:12.5px;font-weight:800;line-height:1.15;
+    box-shadow:0 8px 20px rgba(240,100,10,.45);transform:rotate(8deg);z-index:3;
+  }
   .pname{font-size:15px;font-weight:700;color:var(--mist)}
   .pprice{font-family:var(--latin);font-size:46px;color:var(--ink);line-height:1;margin:10px 0 0;letter-spacing:.01em}
   .pprice .unit{font-family:var(--body);font-size:15px;color:var(--mist);font-weight:500;margin-left:6px}
@@ -381,12 +397,17 @@
   .pcamp{display:inline-block;margin-top:9px;font-size:11.5px;font-weight:800;color:#fff;background:var(--orange);padding:3px 11px;border-radius:999px;letter-spacing:.03em}
   .phi{margin:18px 0 2px;padding:11px 14px;border-radius:10px;background:rgba(240,100,10,.1);border:1px solid rgba(240,100,10,.4);color:var(--ink);font-size:13px;font-weight:800;text-align:center;line-height:1.5}
 
+  /* emphasize Business plan fee & shipping (weaken others) */
+  .pcard.free .pfee .v,.pcard.featured .pfee .v{color:var(--mist)}
+  .pcard.biz .pfee{background:rgba(240,100,10,.1);border:1px solid rgba(240,100,10,.35)}
+  .pcard.biz .pship .prow span{color:var(--orange);font-weight:700}
+
   /* plan feature comparison */
-  .cmp-head{max-width:660px;margin:56px auto 0;text-align:center}
+  .cmp-head{max-width:580px;margin:56px auto 0;text-align:center}
   .cmp-head h3{font-size:21px;font-weight:900;color:#fff}
   .cmp-head p{font-size:13px;color:rgba(255,255,255,.6);margin-top:8px}
-  .cmp-wrap{max-width:660px;margin:24px auto 0;overflow-x:auto;-webkit-overflow-scrolling:touch}
-  .cmp{width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px}
+  .cmp-wrap{max-width:580px;margin:24px auto 0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .cmp{width:100%;border-collapse:collapse;font-size:13.5px;min-width:500px}
   .cmp th,.cmp td{padding:12px 12px;text-align:center;border-bottom:1px solid var(--line-d)}
   .cmp thead th{color:#fff;font-weight:800;font-size:13.5px;vertical-align:bottom;border-bottom:1px solid rgba(255,255,255,.28)}
   .cmp thead th .pp{display:block;font-family:var(--latin);font-size:17px;color:var(--orange);font-weight:400;margin-top:4px}
@@ -563,7 +584,12 @@
   .foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start}
   .foot .logo img{height:42px;margin-bottom:16px}
   .foot address{font-style:normal;font-size:13px;line-height:1.9}
+  .foot .foot-op{display:block;margin-top:14px;font-size:12px;color:rgba(255,255,255,.45);line-height:1.85}
   .foot .copy{font-size:12px;color:rgba(255,255,255,.4);margin-top:28px;width:100%;border-top:1px solid var(--line-d);padding-top:20px}
+  .foot-nav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px 18px;max-width:460px}
+  .foot-nav a{color:rgba(255,255,255,.7);font-size:13px;font-weight:500;transition:color .2s}
+  .foot-nav a:hover{color:#fff}
+  @media(max-width:760px){.foot-nav{justify-content:flex-start;max-width:none;margin-top:8px}}
 
   /* ---------- contact modal ---------- */
   .modal-overlay{
@@ -753,8 +779,8 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Flagship Features</span>
-      <h2>全部揃ってるのは、<br>神戸バンブー代行だけ。</h2>
-      <p>完全自動化・利益の見える化・経理の簡略化・在庫管理・日本人対応・高品質検品・綺麗な梱包。どれか一つではなく、全てが揃う——それが他の代行との違いです。</p>
+      <h2>自動化で土台を、<br>見える化で利益を。</h2>
+      <p>ショップ連携による完全自動化は、いまや当たり前の&ldquo;土台&rdquo;。神戸バンブー代行はその先――粗利管理や販売前シミュレーションで「利益が見える・残る」まで揃えました。在庫管理も、日本人対応も、高品質検品も、ぜんぶ一つに。</p>
     </div>
 
     <!-- cluster 1 -->
@@ -931,7 +957,7 @@
 
       <!-- standard plan (campaign / featured) -->
       <div class="pcard featured">
-        <div class="pbadge">今だけキャンペーン中</div>
+        <div class="pop-free"><span class="s">初月</span><span class="b">無料</span></div>
         <div class="pname">スタンダードプラン</div>
         <div class="pprice"><span class="was">¥2,980</span>¥1,980<span class="unit">/月</span></div>
         <span class="pcamp">今だけ ¥1,000 OFF</span>
@@ -956,17 +982,20 @@
       </div>
 
       <!-- business plan -->
-      <div class="pcard">
+      <div class="pcard biz">
         <div class="pname">ビジネスプラン</div>
         <div class="pprice">¥29,800<span class="unit">/月</span></div>
         <div class="pfee">
           <span class="l">代行手数料</span>
           <span class="v">13元<small>/点</small></span>
         </div>
+        <div class="phi">スタンダードの全機能 ＋ 手数料・送料が割引</div>
         <div class="pbreak">月およそ <b id="breakNum">134</b> オーダー以上でおトク</div>
         <div class="bsub">※1オーダーあたり約9元おトク（1元=24.8円で計算）</div>
         <ul class="pinc">
-          <li>粗利管理・利益シミュレーション 込み</li>
+          <li><b>すべての機能</b>が使える（粗利・シミュ・会計連携 込み）</li>
+          <li>代行手数料が割引（<b>15元 → 13元</b>）</li>
+          <li>国際送料も割引</li>
           <li>詳細検品・袋交換 込み</li>
         </ul>
         <div class="pship">
@@ -995,7 +1024,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr><th>代行手数料</th><td class="val">15元/点</td><td class="val">15元/点</td><td class="val">13元/点</td></tr>
+          <tr><th>代行手数料</th><td class="val">15元/点</td><td class="val">15元/点</td><td class="val" style="color:var(--orange);font-weight:700">13元/点</td></tr>
           <tr><th>ショップ連携完全自動化</th><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
           <tr><th>受注の一括管理・発注</th><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
           <tr><th>発送通知の自動反映</th><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
@@ -1009,7 +1038,7 @@
           <tr><th>改善提案（近日）</th><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
           <tr><th>会計ソフト連携（順次）</th><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
           <tr><th>経理用データDL（順次）</th><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-          <tr><th>国際送料の割引</th><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+          <tr><th>国際送料</th><td class="val">通常</td><td class="val">通常</td><td class="val" style="color:var(--orange);font-weight:700">割引</td></tr>
         </tbody>
       </table>
     </div>
@@ -1223,7 +1252,7 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Message</span>
-      <h2>代表挨拶</h2>
+      <h2>売れることだけに、<br>集中してほしい。</h2>
     </div>
     <div class="message-wrap reveal">
       <div class="message-portrait">
@@ -1389,7 +1418,7 @@
 <!-- ===== CTA ===== -->
 <section class="cta" id="contact">
   <div class="wrap reveal">
-    <h2>次の一歩を、<br>ここから。</h2>
+    <h2>「さばく」毎日から、<br>「伸ばす」毎日へ。</h2>
     <p>もう決めている方は、会員登録の審査へ。迷っている方は、業務量や悩みをそのままLINE・Chatworkでご相談ください。今のやり方は変えなくて大丈夫です。</p>
     <div class="cta-btns">
       <a href="https://share.hsforms.com/1IXWWQMrUTYGnwg9T3xzplgrvgvr" target="_blank" rel="noopener" class="btn">会員登録の審査を申し込む</a>
@@ -1429,11 +1458,11 @@
     <div>
       <div class="logo"><img src="images/logo.webp" alt="神戸バンブー代行"></div>
       <address>
-        株式会社MCT COMPANY（神戸バンブー代行・中国輸入仕入れ代行）<br>
-        〒653-0038　神戸市長田区若松町1-5-7
+        無在庫専門 中国輸入仕入れ代行
+        <span class="foot-op">運営元：<br>株式会社MCT COMPANY<br>慕兹特（上海）贸易有限公司</span>
       </address>
     </div>
-    <nav class="nav-links" id="footMenu" style="flex-direction:column;align-items:flex-end;gap:12px"></nav>
+    <nav class="foot-nav" id="footMenu"></nav>
     <div class="copy">© <span id="yr"></span> MCT COMPANY / 神戸バンブー代行. All rights reserved.</div>
   </div>
 </footer>
