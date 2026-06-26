@@ -743,6 +743,19 @@
   #search .imp-new-flow{justify-content:center}
   @media(max-width:600px){.imp-new{flex-direction:column;gap:12px;padding:18px}.imp-new-flow{flex-direction:column;align-items:stretch}.imp-new-flow .arrow{display:none}.imp-new-flow .step{width:100%;text-align:center}}
 </style>
+<style>
+  .imp-new .flow-label{font-size:13px;font-weight:800;color:var(--orange);margin:18px 0 10px}
+</style>
+<style>
+  #search .imp-new-flow{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;gap:8px;-webkit-overflow-scrolling:touch;padding-bottom:2px}
+  #search .imp-new-flow .step{white-space:nowrap;flex-shrink:0;font-size:12.5px;padding:8px 12px}
+  #search .imp-new-flow .arrow{flex-shrink:0}
+  @media(max-width:600px){
+    #search .imp-new-flow{flex-direction:row;align-items:center}
+    #search .imp-new-flow .arrow{display:inline}
+    #search .imp-new-flow .step{width:auto;text-align:center}
+  }
+</style>
 </head>
 <body>
 
@@ -860,7 +873,7 @@
         <div class="feat">
           <div class="feat-body">
             <div class="ttl">ネットショップ連携（BASE / Shopify / STORES）</div>
-            <div class="desc">ショップで売れた注文の取り込みから発注、発送通知のショップ反映まで完全自動化。注文が増えても、発注の手間は比例して増えません。</div>
+            <div class="desc">ショップで売れた注文の取り込みから発注、発送通知のショップ反映まで完全自動化。注文が増えても、発注の手間は比例して増えません。Taobao・1688・T-mallの商品と連携できます。</div>
             <div class="feat-note">※ BASE 提供中 ／ Shopify 近日公開 ／ STORES 順次公開予定</div>
           </div>
           <div class="feat-status"><span class="chip live"><span class="led"></span>提供中</span></div>
@@ -996,15 +1009,30 @@
     <div class="sec-head reveal" style="max-width:46em">
       <span class="eyebrow">New Feature</span>
       <h2>探すところから、<br>システムの中で。</h2>
-      <p>システム内で商品をそのまま検索できるようになりました。キーワードはもちろん、画像検索にも対応しています。</p>
+      <p>Taobao・1688・T-mallの商品を、キーワードまたは画像で検索。値付けツールで利益をシミュレーションし、仕入れ依頼や出品までシームレスに行えます。</p>
     </div>
     <div class="imp-new reveal">
       <span class="imp-new-badge">NEW</span>
       <div class="imp-new-body">
         <h3>システム内で「商品検索」ができるように。</h3>
-        <p>キーワードはもちろん、<b>画像検索</b>にも対応。探したい商品を、システム内からそのまま見つけられます。</p>
+        <p>さらに<b>粗利管理機能と連動</b>。「いくらまでの仕入れなら利益が残るか」を基準に仕入先を探せるので、粗利改善に直接つながります。</p>
+        <div class="flow-label">＜販売シミュレーション＞</div>
         <div class="imp-new-flow">
-          <span class="step">販売数が多い順に並べる</span>
+          <span class="step">キーワードか画像検索で探す</span>
+          <span class="arrow">→</span>
+          <span class="step">評価や販売数を参考に選ぶ</span>
+          <span class="arrow">→</span>
+          <span class="step">値付けツールで利益をシミュレーションし出品</span>
+        </div>
+        <div class="flow-label">＜粗利の改善＞</div>
+        <div class="imp-new-flow">
+          <span class="step">いくらまでの単価で絞る</span>
+          <span class="arrow">→</span>
+          <span class="step">値付けツールで粗利を確認し、仕入れ先を変更</span>
+        </div>
+        <div class="flow-label">＜在庫切れ回避の場合＞</div>
+        <div class="imp-new-flow">
+          <span class="step">販売数が多い順に並べる（1688）</span>
           <span class="arrow">→</span>
           <span class="step">在庫切れリスクを下げて選ぶ</span>
           <span class="arrow">→</span>
