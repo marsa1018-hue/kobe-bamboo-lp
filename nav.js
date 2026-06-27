@@ -38,7 +38,7 @@
 
   var navItems = [
     { href: '/#flagship', label: '目玉機能' },
-    { href: '/#features', label: '全機能を見る' },
+    { href: '/features/', label: '全機能を見る' },
     { href: '/#pricing',  label: '料金' },
     { href: '/#shipping', label: '送料' },
     {
