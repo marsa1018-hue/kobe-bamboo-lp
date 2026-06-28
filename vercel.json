@@ -1,0 +1,23 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "redirects": [
+    {"source": "/ryoukin", "destination": "/#pricing", "permanent": true},
+    {"source": "/unchin", "destination": "/#shipping", "permanent": true},
+    {"source": "/tensou", "destination": "/#pricing", "permanent": true},
+    {"source": "/oem-2", "destination": "/#pricing", "permanent": true},
+    {"source": "/nouki", "destination": "/#leadtime", "permanent": true},
+    {"source": "/aes", "destination": "/#flagship", "permanent": true},
+    {"source": "/baserenkei", "destination": "/features/", "permanent": true},
+    {"source": "/riyuu", "destination": "/#flagship", "permanent": true},
+    {"source": "/goriyouhouhou", "destination": "/#howto", "permanent": true},
+    {"source": "/koe", "destination": "/#voices", "permanent": true},
+    {"source": "/daihyouaisatsu", "destination": "/#message", "permanent": true},
+    {"source": "/archives/4794", "destination": "/", "permanent": true},
+    {"source": "/archives/4749", "destination": "/", "permanent": true},
+    {"source": "/archives/3839", "destination": "/archives/4172/", "permanent": true},
+    {"source": "/archives/3787", "destination": "/archives/421/", "permanent": true},
+    {"source": "/archives/3593", "destination": "/", "permanent": true},
+    {"source": "/archives/418", "destination": "/", "permanent": true}
+  ]
+}
