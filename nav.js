@@ -10,6 +10,12 @@
     + '.nav-dropdown ul { display: none; position: absolute; top: 100%; left: 0; background: #14235E; border-radius: 8px; padding: 8px 0; min-width: 140px; box-shadow: 0 8px 24px rgba(0,0,0,.3); z-index: 100; list-style: none; margin: 0; }'
     + '.nav-dropdown:hover ul, .nav-dropdown.open ul { display: block; }'
     + '.nav-dropdown ul a { display: block; padding: 10px 18px; color: rgba(255,255,255,.78); font-size: 13px; white-space: nowrap; }'
+    + '@media(max-width:1100px){'
+    + '  .mobile-menu .nav-dropdown{position:static;width:100%;}'
+    + '  .mobile-menu .nav-dropdown > span{display:flex;align-items:center;justify-content:space-between;width:100%;color:#fff;font-size:19px;font-weight:700;padding:15px 4px;border-bottom:1px solid rgba(255,255,255,.12);}'
+    + '  .mobile-menu .nav-dropdown ul{display:block !important;position:static;background:transparent;box-shadow:none;min-width:0;padding:0;margin:0;}'
+    + '  .mobile-menu .nav-dropdown ul a{padding:13px 4px 13px 20px;font-size:16px;color:rgba(255,255,255,.85);white-space:normal;border-bottom:1px solid rgba(255,255,255,.08);}'
+    + '}'
     + '.nav-dropdown ul a:hover { color: #fff; background: rgba(255,255,255,.06); }';
   var style = document.createElement('style');
   style.textContent = css;
