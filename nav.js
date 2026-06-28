@@ -60,7 +60,7 @@
     },
     { href: '/archives/421/', label: '初心者ガイド' },
     { href: '/ichiran/',      label: 'ブログ' },
-    { href: '/contact/',      label: 'お問い合わせ' },
+    { href: '#contact',       label: 'お問い合わせ' },
     { href: 'https://share.hsforms.com/1IXWWQMrUTYGnwg9T3xzplgrvgvr', label: '審査申込', cls: 'btn', target: '_blank' },
   ];
 
