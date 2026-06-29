@@ -61,7 +61,7 @@
     { href: '/archives/421/', label: '初心者ガイド' },
     { href: '/ichiran/',      label: 'ブログ' },
     { href: '#contact',       label: 'お問い合わせ' },
-    { href: 'https://share.hsforms.com/1IXWWQMrUTYGnwg9T3xzplgrvgvr', label: '審査申込', cls: 'btn', target: '_blank' },
+    { href: 'https://share.hsforms.com/1IXWWQMrUTYGnwg9T3xzplgrvgvr', label: '利用申込', cls: 'btn', target: '_blank' },
   ];
 
   // ドロップダウン要素を生成（PCホバー：CSS / モバイルタップ：clickで .open トグル）
