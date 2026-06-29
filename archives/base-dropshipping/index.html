@@ -851,9 +851,12 @@
   .ba .bacard .bv{font-size:14px;line-height:1.85;margin-top:7px;color:var(--ink)}
   .ba .bacard .bv b{font-weight:800}
   /* author box */
-  .author-box{background:var(--paper);border:1px solid var(--line-l);border-radius:14px;padding:24px 26px;margin:30px 0}
+  .author-box{background:var(--paper);border:1px solid var(--line-l);border-radius:14px;padding:24px 26px;margin:30px 0;display:flex;gap:22px;align-items:flex-start}
+  .author-box .ab-photo{flex-shrink:0;width:92px;height:92px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 5px 16px rgba(16,23,54,.14)}
+  .author-box .ab-body{flex:1;min-width:0}
   .author-box .ab-name{font-size:16px;font-weight:900;color:var(--ink);margin-bottom:10px}
   .author-box p{font-size:14px;line-height:1.95;color:var(--ink);margin:0}
+  @media(max-width:520px){.author-box{gap:16px;padding:20px}.author-box .ab-photo{width:64px;height:64px}}
   /* related links */
   .related{display:flex;flex-direction:column;gap:12px;margin:18px 0 6px}
   .related a{display:flex;align-items:center;justify-content:space-between;gap:14px;background:#fff;border:1px solid var(--line-l);border-radius:12px;padding:15px 18px;font-size:14.5px;font-weight:700;color:var(--ink);transition:border-color .2s,transform .15s}
@@ -1114,8 +1117,11 @@
       </ul>
 
       <div class="author-box">
+        <img class="ab-photo" src="/images/daihyou.webp" alt="神戸バンブー代行 代表（株式会社MCT COMPANY）">
+        <div class="ab-body">
         <div class="ab-name">この記事を書いた人 ── 神戸バンブー代行（株式会社MCT COMPANY）</div>
         <p>神戸を拠点に、中国輸入の無在庫直送を専門とする代行サービスを運営。無在庫歴12年、中国側での取扱商品は累計80万点以上。上海での6年間の駐在に加え、元アパレル・雑貨商社の中国側担当として現地の仕入れ・検品・物流の現場に携わってきました。その経験を、無在庫販売を自動化する受発注システムとして形にしています。</p>
+        </div>
       </div>
 
       <div class="related">
