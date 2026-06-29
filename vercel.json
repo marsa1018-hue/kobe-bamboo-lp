@@ -2,6 +2,7 @@
   "cleanUrls": true,
   "trailingSlash": true,
   "redirects": [
+    {"source": "/faq", "destination": "/#faq", "permanent": true},
     {"source": "/ryoukin", "destination": "/#pricing", "permanent": true},
     {"source": "/unchin", "destination": "/#shipping", "permanent": true},
     {"source": "/tensou", "destination": "/#pricing", "permanent": true},
