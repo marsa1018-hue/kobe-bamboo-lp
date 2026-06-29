@@ -197,3 +197,13 @@
   });
   document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeModal(); });
 })();
+
+/* ===== 利用申込みモーダルの共通JSを読み込み（全ページ共通） ===== */
+(function(){
+  if (document.getElementById('applyModalScript')) return;
+  var sc = document.createElement('script');
+  sc.id = 'applyModalScript';
+  sc.src = '/apply-modal.js';
+  sc.defer = true;
+  document.head.appendChild(sc);
+})();
