@@ -135,3 +135,65 @@
     });
   }
 })();
+
+/* ===== お問い合わせモーダル（全ページ共通） ===== */
+(function(){
+  if (!document.getElementById('contactModalCss')) {
+    var mcss = document.createElement('style');
+    mcss.id = 'contactModalCss';
+    mcss.textContent = ''
+      + '.modal-overlay{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:24px;background:rgba(8,14,34,.72);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease;}'
+      + '.modal-overlay.open{opacity:1;visibility:visible;}'
+      + '.modal{background:#fff;color:#101736;border-radius:20px;max-width:440px;width:100%;padding:36px 30px 30px;position:relative;box-shadow:0 40px 90px rgba(0,0,0,.5);transform:translateY(20px) scale(.97);transition:transform .35s cubic-bezier(.16,.84,.34,1);font-family:"Noto Sans JP",system-ui,sans-serif;}'
+      + '.modal-overlay.open .modal{transform:none;}'
+      + '.modal-close{position:absolute;top:16px;right:16px;width:34px;height:34px;border-radius:50%;border:none;background:#F3F6FB;color:#5B668C;font-size:20px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,color .2s;}'
+      + '.modal-close:hover{background:#e9edf5;color:#101736;}'
+      + '.modal h3{font-family:"Noto Sans JP",system-ui,sans-serif;font-weight:900;font-size:23px;margin:0 0 6px;letter-spacing:.01em;}'
+      + '.modal .msub{font-size:13.5px;color:#5B668C;margin-bottom:24px;line-height:1.6;}'
+      + '.contact-opts{display:flex;flex-direction:column;gap:12px;}'
+      + '.copt{display:flex;align-items:center;gap:16px;text-align:left;border:1px solid rgba(16,23,54,.10);border-radius:14px;padding:16px 18px;transition:transform .15s ease,box-shadow .2s ease,border-color .2s;}'
+      + '.copt:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(16,23,54,.10);border-color:rgba(240,100,10,.5);}'
+      + '.copt .cico{flex-shrink:0;width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:13px;letter-spacing:.02em;color:#fff;font-weight:700;}'
+      + '.copt .cico.line{background:#06C755;}'
+      + '.copt .cico.cw{background:#2E7CE4;}'
+      + '.copt .ctxt{flex:1;}'
+      + '.copt .ctxt b{display:block;font-size:15.5px;font-weight:700;color:#101736;}'
+      + '.copt .ctxt small{display:block;font-size:12.5px;color:#5B668C;margin-top:2px;line-height:1.5;}'
+      + '.copt .carr{color:#5B668C;flex-shrink:0;font-size:18px;transition:transform .2s,color .2s;}'
+      + '.copt:hover .carr{color:#F0640A;transform:translateX(3px);}';
+    document.head.appendChild(mcss);
+  }
+
+  var overlay = document.getElementById('contactModal');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.className = 'modal-overlay';
+    overlay.id = 'contactModal';
+    overlay.setAttribute('role','dialog');
+    overlay.setAttribute('aria-modal','true');
+    overlay.setAttribute('aria-hidden','true');
+    overlay.innerHTML = ''
+      + '<div class="modal">'
+      + '<button class="modal-close" id="modalClose" aria-label="閉じる">&times;</button>'
+      + '<h3 id="modalTitle">お問い合わせ</h3>'
+      + '<p class="msub">ご都合のよい方法でお気軽に。<br>「うちの場合、どう変わる？」をそのままお聞かせください。</p>'
+      + '<div class="contact-opts">'
+      + '<a class="copt" href="https://lin.ee/51gfGsk" target="_blank" rel="noopener"><span class="cico line">LINE</span><span class="ctxt"><b>LINEで相談する</b><small>ふだん使いのLINEで、気軽にやり取り</small></span><span class="carr">&rsaquo;</span></a>'
+      + '<a class="copt" href="https://www.chatwork.com/mct_takemura" target="_blank" rel="noopener"><span class="cico cw">CW</span><span class="ctxt"><b>Chatworkで相談する</b><small>ビジネスチャットでしっかりやり取り</small></span><span class="carr">&rsaquo;</span></a>'
+      + '</div>'
+      + '</div>';
+    document.body.appendChild(overlay);
+  }
+
+  function openModal(){ overlay.classList.add('open'); overlay.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
+  function closeModal(){ overlay.classList.remove('open'); overlay.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+
+  document.addEventListener('click', function(e){
+    if (!e.target.closest) return;
+    var a = e.target.closest('a[href$="#contact"]');
+    if (a){ e.preventDefault(); openModal(); return; }
+    if (e.target.closest('#modalClose')){ closeModal(); return; }
+    if (e.target === overlay){ closeModal(); }
+  });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeModal(); });
+})();
