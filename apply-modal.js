@@ -16,9 +16,9 @@
   var IFRAME_BASE   = IFRAME_ORIGIN + '/apply';
 
   var PLANS = [
-    { key: 'free',     name: '月額無料プラン',       desc: 'まずは無料で。基本機能をご利用いただけます。', badge: '無料' },
-    { key: 'standard', name: 'スタンダードプラン',   desc: '商品検索・利益シミュレーション・粗利管理機能が使えます。', badge: '人気' },
-    { key: 'business', name: 'ビジネスプラン',       desc: '全機能に加え、送料や手数料が割引になります。', badge: '最上位' }
+    { key: 'free',     name: '月額無料プラン',       desc: 'まずは無料で。基本機能をご利用いただけます。', badge: '無料',   price: '¥0',      unit: '／月' },
+    { key: 'standard', name: 'スタンダードプラン',   desc: '商品検索・利益シミュレーション・粗利管理機能が使えます。', badge: '人気',   price: '¥4,980',  unit: '／月', trial: '7日間無料', fee: true },
+    { key: 'business', name: 'ビジネスプラン',       desc: '全機能に加え、送料や手数料が割引になります。', badge: '最上位', price: '¥29,800', unit: '／月', fee: true }
   ];
 
   var currentPlan = null;
@@ -44,7 +44,7 @@
       + '.applym-step{display:none;}'
       + '.applym-modal[data-step="plans"] .applym-step-plans{display:block;}'
       + '.applym-modal[data-step="form"] .applym-step-form{display:block;}'
-      + '.applym-h3{font-weight:900;font-size:23px;margin:0 0 6px;letter-spacing:.01em;}'
+      + '.applym-h3{font-weight:900;font-size:23px;margin:0 0 20px;letter-spacing:.01em;}'
       + '.applym-sub{font-size:13.5px;color:#5B668C;margin:0 0 22px;line-height:1.6;}'
       + '.applym-plans{display:flex;flex-direction:column;gap:12px;}'
       + '.applym-plan{display:flex;align-items:center;gap:16px;text-align:left;border:1px solid rgba(16,23,54,.12);border-radius:14px;padding:16px 18px;transition:transform .15s ease,box-shadow .2s ease,border-color .2s;}'
@@ -55,6 +55,11 @@
       + '.applym-plan[data-plan="free"] .applym-plan-badge{background:#5B668C;}'
       + '.applym-plan[data-plan="business"] .applym-plan-badge{background:#14235E;}'
       + '.applym-plan-desc{font-size:12.8px;color:#5B668C;margin-top:4px;line-height:1.55;}'
+      + '.applym-plan-price{display:flex;align-items:baseline;flex-wrap:wrap;gap:7px;margin-top:7px;}'
+      + '.applym-plan-price b{font-size:21px;font-weight:900;color:#101736;line-height:1;}'
+      + '.applym-plan-unit{font-size:12px;color:#5B668C;font-weight:600;}'
+      + '.applym-plan-trial{font-size:11px;font-weight:700;color:#06873c;background:rgba(6,199,85,.12);border-radius:999px;padding:2px 9px;}'
+      + '.applym-plan-fee{font-size:11px;color:#8a92ad;margin-top:7px;line-height:1.5;}'
       + '.applym-plan-btn{flex-shrink:0;border:none;cursor:pointer;background:#F0640A;color:#fff;font-weight:700;font-size:13.5px;border-radius:10px;padding:11px 16px;white-space:nowrap;transition:background .2s,transform .15s;font-family:inherit;}'
       + '.applym-plan-btn:hover{background:#d8550a;transform:translateX(2px);}'
       + '.applym-form-head{display:flex;align-items:center;gap:12px;padding:6px 6px 12px;}'
@@ -73,10 +78,14 @@
       + '.applym-done p{font-size:14px;color:#5B668C;margin:0 0 22px;line-height:1.7;}'
       + '.applym-done-btn{display:inline-block;border:none;cursor:pointer;background:#101736;color:#fff;font-weight:700;font-size:14px;border-radius:10px;padding:13px 28px;font-family:inherit;}'
       + '@media(max-width:560px){'
-      + '  .applym-modal{padding:30px 18px 22px;border-radius:16px;}'
-      + '  .applym-plan{flex-direction:column;align-items:stretch;gap:12px;}'
+      + '  .applym-modal{padding:22px 15px 18px;border-radius:16px;max-height:88vh;}'
+      + '  .applym-h3{font-size:18px;margin:0 0 14px;}'
+      + '  .applym-plan{flex-direction:column;align-items:stretch;gap:9px;padding:14px 15px;}'
       + '  .applym-plan-btn{width:100%;text-align:center;}'
-      + '  .applym-h3{font-size:20px;}'
+      + '  .applym-plan-name{font-size:15px;}'
+      + '  .applym-plan-price b{font-size:19px;}'
+      + '  .applym-plan-desc{font-size:12.2px;}'
+      + '  .applym-plan-fee{font-size:10.5px;}'
       + '}';
     document.head.appendChild(s);
   }
@@ -96,7 +105,9 @@
         + '<div class="applym-plan" data-plan="'+p.key+'">'
         +   '<div class="applym-plan-body">'
         +     '<div class="applym-plan-name">'+p.name+'<span class="applym-plan-badge">'+p.badge+'</span></div>'
+        +     '<div class="applym-plan-price"><b>'+p.price+'</b><span class="applym-plan-unit">'+p.unit+'</span>'+(p.trial?'<span class="applym-plan-trial">'+p.trial+'</span>':'')+'</div>'
         +     '<div class="applym-plan-desc">'+p.desc+'</div>'
+        +     (p.fee?'<div class="applym-plan-fee">※ 別途、決済手数料3.6%が必要です</div>':'')
         +   '</div>'
         +   '<button class="applym-plan-btn" type="button" data-plan="'+p.key+'">このプランで申し込む</button>'
         + '</div>';
@@ -107,7 +118,6 @@
       +   '<button class="applym-close" type="button" aria-label="閉じる" data-applym-close>&times;</button>'
       +   '<div class="applym-step applym-step-plans">'
       +     '<h3 class="applym-h3">利用申込み</h3>'
-      +     '<p class="applym-sub">ご希望のプランをお選びください。<br>選択後、その場で申し込みフォームが開きます。</p>'
       +     '<div class="applym-plans">'+planCards+'</div>'
       +   '</div>'
       +   '<div class="applym-step applym-step-form">'
