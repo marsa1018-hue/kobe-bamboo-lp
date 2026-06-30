@@ -1706,9 +1706,7 @@
       var a = e.target.closest && e.target.closest('a');
       if(!a) return;
       var href = a.getAttribute('href') || '';
-      if(href.indexOf('share.hsforms.com') !== -1){
-        gtag('event', 'click_audit_application', {link_url: href});
-      } else if(href.indexOf('lin.ee') !== -1){
+      if(href.indexOf('lin.ee') !== -1){
         gtag('event', 'click_line', {link_url: href});
       } else if(href.indexOf('chatwork.com') !== -1){
         gtag('event', 'click_chatwork', {link_url: href});
