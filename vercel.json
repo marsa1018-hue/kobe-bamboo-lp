@@ -19,6 +19,7 @@
     {"source": "/archives/3839", "destination": "/archives/4172/", "permanent": true},
     {"source": "/archives/3787", "destination": "/archives/421/", "permanent": true},
     {"source": "/archives/3593", "destination": "/", "permanent": true},
-    {"source": "/archives/418", "destination": "/", "permanent": true}
+    {"source": "/archives/418", "destination": "/", "permanent": true},
+    {"source": "/archives/asp-products/bamboomapkounyuu", "destination": "/archives/bamboomap/", "permanent": true}
   ]
 }
