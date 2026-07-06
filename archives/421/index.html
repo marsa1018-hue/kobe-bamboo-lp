@@ -30,7 +30,9 @@
 <link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+JP:wght@400;500;700;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"></noscript>
 <style>
   :root{
     --navy:#14235E;
@@ -836,7 +838,7 @@
 <section class="page-hero art-hero">
   <div class="wrap">
     <div class="art-hero-grid">
-      <div class="art-hero-thumb"><img src="/images/guide.webp" alt="中国輸入 無在庫 完全ガイド ─ 神戸バンブー代行"></div>
+      <div class="art-hero-thumb"><img src="/images/guide.webp" alt="中国輸入 無在庫 完全ガイド ─ 神戸バンブー代行" fetchpriority="high"></div>
       <div class="art-hero-text">
         <span class="eyebrow">Blog</span>
         <h1>中国輸入 無在庫【完全ガイド】やり方〜注意点まで完全網羅</h1>
