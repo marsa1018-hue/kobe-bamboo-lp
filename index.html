@@ -699,13 +699,7 @@
   .stagger.in > *:nth-child(6){transition-delay:.60s}
 
   /* hero load sequence */
-  .hero-seq{opacity:1;transform:translateY(28px);animation:heroIn .8s cubic-bezier(.16,.84,.34,1) forwards}
-  .hero-seq.d1{animation-delay:.08s}
-  .hero-seq.d2{animation-delay:.22s}
-  .hero-seq.d3{animation-delay:.38s}
-  .hero-seq.d4{animation-delay:.54s}
-  .hero-seq.d5{animation-delay:.72s}
-  @keyframes heroIn{from{transform:translateY(28px)}to{transform:none}}
+  .hero-seq{opacity:1;transform:none;animation:none}
 
   @media(prefers-reduced-motion:reduce){
     .reveal,.sec-head.reveal,.stagger > *{opacity:1;transform:none;transition:none}
