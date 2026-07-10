@@ -22,17 +22,6 @@
     {"source": "/archives/3787", "destination": "/archives/421/", "permanent": true},
     {"source": "/archives/3593", "destination": "/", "permanent": true},
     {"source": "/archives/418", "destination": "/", "permanent": true},
-    {"source": "/archives/asp-products/bamboomapkounyuu", "destination": "/archives/bamboomap/", "permanent": true},
-    {"source": "/stripe-checkout-result", "destination": "/", "permanent": true},
-    {"source": "/products", "destination": "/", "permanent": true},
-    {"source": "/appprivacy-policy", "destination": "/", "permanent": true},
-    {"source": "/kobetsusoudan", "destination": "/", "permanent": true},
-    {"source": "/ask", "destination": "/", "permanent": true},
-    {"source": "/afterreregistration", "destination": "/", "permanent": true},
-    {"source": "/soudanmousikomikanryou", "destination": "/", "permanent": true},
-    {"source": "/bamboomapkiyaku", "destination": "/archives/421/", "permanent": true},
-    {"source": "/archives/category/chugokuyunyu", "destination": "/ichiran/", "permanent": true},
-    {"source": "/archives/category/muzaiko", "destination": "/ichiran/", "permanent": true},
-    {"source": "/archives/7660", "destination": "/archives/421/", "permanent": true}
+    {"source": "/archives/asp-products/bamboomapkounyuu", "destination": "/archives/bamboomap/", "permanent": true}
   ]
 }
