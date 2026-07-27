@@ -17,7 +17,8 @@
 
   var PLANS = [
     { key: 'free',     name: '月額無料プラン',       desc: 'まずは無料で。基本機能をご利用いただけます。', badge: '無料',   price: '¥0',      unit: '／月' },
-    { key: 'standard', name: 'スタンダードプラン',   desc: '商品検索・利益シミュレーション・粗利管理機能が使えます。', badge: '人気',   price: '¥4,980',  unit: '／月', trial: '7日間無料', fee: true },
+    { key: 'standard', name: 'スタンダードプラン',   desc: '商品検索・利益シミュレーション・粗利管理機能が使えます。<a class="applym-plan-link" href="https://mctcompany.net/features/" target="_blank" rel="noopener">機能の詳細を見る →</a>', badge: '人気',   price: '¥4,980',  unit: '／月', trial: '7日間無料', fee: true },
+    { key: 'knowledge', name: 'ノウハウプラン',      desc: 'スタンダードの全機能に加え、有料ノウハウページを閲覧できます。<a class="applym-plan-link" href="https://mctcompany.net/archives/bamboomap/" target="_blank" rel="noopener">ノウハウ内容を見る →</a>', badge: 'ノウハウ付', price: '¥9,800',  unit: '／月', trial: '7日間無料', fee: true },
     { key: 'business', name: 'ビジネスプラン',       desc: '全機能に加え、送料や手数料が割引になります。', badge: '最上位', price: '¥29,800', unit: '／月', fee: true }
   ];
 
@@ -55,6 +56,8 @@
       + '.applym-plan[data-plan="free"] .applym-plan-badge{background:#5B668C;}'
       + '.applym-plan[data-plan="business"] .applym-plan-badge{background:#14235E;}'
       + '.applym-plan-desc{font-size:12.8px;color:#5B668C;margin-top:4px;line-height:1.55;}'
+      + '.applym-plan-link{display:inline-block;margin-top:5px;color:#F0640A;font-weight:700;text-decoration:none;border-bottom:1px solid rgba(240,100,10,.4);}'
+      + '.applym-plan-link:hover{color:#d8550a;border-bottom-color:#d8550a;}'
       + '.applym-plan-price{display:flex;align-items:baseline;flex-wrap:wrap;gap:7px;margin-top:7px;}'
       + '.applym-plan-price b{font-size:21px;font-weight:900;color:#101736;line-height:1;}'
       + '.applym-plan-unit{font-size:12px;color:#5B668C;font-weight:600;}'
@@ -212,6 +215,10 @@
       openModal();
       return;
     }
+
+    // カード内のリンク（機能紹介・ノウハウ内容など）はプラン選択を発火させず通常遷移させる
+    var innerLink = e.target.closest('a[href]');
+    if (innerLink && overlay.contains(innerLink)) return;
 
     // モーダル内操作
     var planBtn = e.target.closest('.applym-plan-btn, .applym-plan');
