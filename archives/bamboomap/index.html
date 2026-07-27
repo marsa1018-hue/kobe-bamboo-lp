@@ -852,6 +852,8 @@
   .price-box .price-note{font-size:12px;opacity:.78;line-height:1.7;max-width:30em;margin:6px auto 20px}
   .buy-btn{display:inline-block;font-weight:800;font-size:17px;padding:17px 54px;border-radius:999px;text-decoration:none}
   .buy-btn.disabled{background:#5b617a;color:#c9ccd8;cursor:not-allowed;pointer-events:none;box-shadow:none}
+  .buy-btn:not(.disabled){background:var(--orange);color:#fff;box-shadow:0 10px 26px rgba(240,100,10,.38);cursor:pointer;transition:transform .15s ease,box-shadow .2s ease,background .2s}
+  .buy-btn:not(.disabled):hover{background:#d8550a;transform:translateY(-2px);box-shadow:0 14px 30px rgba(240,100,10,.46)}
   .price-box .price-sub{font-size:12.5px;opacity:.8;margin-top:14px}
   .article .price-box ul.price-feat{list-style:none;margin:4px auto 22px;padding:0;display:inline-flex;flex-direction:column;gap:10px;text-align:left}
   .article .price-box ul.price-feat li{display:block;position:relative;padding:0 0 0 28px;font-size:14.5px;color:#fff;font-weight:600;line-height:1.5}
@@ -1009,14 +1011,14 @@
       <div class="price-box">
         <div class="price-label">必勝！最短バンブーマップ　無在庫最強ツール付き</div>
         <div class="price-amount">¥9,800<span>/ 月</span></div>
+        <div class="price-note">※ 別途、決済手数料3.96%（税込）が必要です</div>
         <ul class="price-feat">
           <li>商品検索（タオバオ・1688）</li>
           <li>利益シミュレーション</li>
           <li>連携出品機能</li>
           <li>粗利管理機能</li>
         </ul>
-        <span class="buy-btn disabled" aria-disabled="true">準備中</span>
-        <div class="price-sub">現在、お申し込みページを準備中です。公開までいましばらくお待ちください。</div>
+        <a href="https://app.mctcompany.net/apply?plan=knowledge" target="_blank" rel="noopener" class="buy-btn">申し込みはこちら</a>
       </div>
 
       <div class="art-cta-box art-cta-summary">

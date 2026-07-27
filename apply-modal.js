@@ -107,7 +107,7 @@
         +     '<div class="applym-plan-name">'+p.name+'<span class="applym-plan-badge">'+p.badge+'</span></div>'
         +     '<div class="applym-plan-price"><b>'+p.price+'</b><span class="applym-plan-unit">'+p.unit+'</span>'+(p.trial?'<span class="applym-plan-trial">'+p.trial+'</span>':'')+'</div>'
         +     '<div class="applym-plan-desc">'+p.desc+'</div>'
-        +     (p.fee?'<div class="applym-plan-fee">※ 別途、決済手数料3.6%が必要です</div>':'')
+        +     (p.fee?'<div class="applym-plan-fee">※ 別途、決済手数料3.96%（税込）が必要です</div>':'')
         +   '</div>'
         +   '<button class="applym-plan-btn" type="button" data-plan="'+p.key+'">このプランで申し込む</button>'
         + '</div>';
