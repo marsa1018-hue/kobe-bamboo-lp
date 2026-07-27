@@ -18,7 +18,7 @@
   var PLANS = [
     { key: 'free',     name: '月額無料プラン',       desc: 'まずは無料で。基本機能をご利用いただけます。', badge: '無料',   price: '¥0',      unit: '／月' },
     { key: 'standard', name: 'スタンダードプラン',   desc: '商品検索・利益シミュレーション・粗利管理機能が使えます。<a class="applym-plan-link" href="https://mctcompany.net/features/" target="_blank" rel="noopener">機能の詳細を見る →</a>', badge: '人気',   price: '¥4,980',  unit: '／月', trial: '7日間無料', fee: true },
-    { key: 'knowledge', name: 'ノウハウプラン',      desc: 'スタンダードの全機能に加え、有料ノウハウページを閲覧できます。<a class="applym-plan-link" href="https://mctcompany.net/archives/bamboomap/" target="_blank" rel="noopener">ノウハウ内容を見る →</a>', badge: 'ノウハウ付', price: '¥9,800',  unit: '／月', trial: '7日間無料', fee: true },
+    { key: 'knowledge', name: 'ノウハウプラン',      desc: 'スタンダードの全機能に加え、有料ノウハウページを閲覧できます。<a class="applym-plan-link" href="https://mctcompany.net/archives/bamboomap/" target="_blank" rel="noopener">ノウハウ内容を見る →</a>', badge: 'ノウハウ付', price: '¥9,800',  unit: '／月', fee: true },
     { key: 'business', name: 'ビジネスプラン',       desc: '全機能に加え、送料や手数料が割引になります。', badge: '最上位', price: '¥29,800', unit: '／月', fee: true }
   ];
 
