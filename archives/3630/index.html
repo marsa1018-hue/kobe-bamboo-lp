@@ -22,9 +22,9 @@
     }
     var evts = ['scroll','mousemove','touchstart','keydown','click'];
     evts.forEach(function(e){ window.addEventListener(e, loadGA, {passive:true, once:true}); });
-    // 操作がなくてもアイドル後（最長5秒）には必ず読み込む
-    if ('requestIdleCallback' in window) requestIdleCallback(loadGA, {timeout:5000});
-    else setTimeout(loadGA, 4000);
+    // 操作がなくてもアイドル後（最長8秒）には必ず読み込む
+    if ('requestIdleCallback' in window) requestIdleCallback(loadGA, {timeout:8000});
+    else setTimeout(loadGA, 8000);
   })();
 </script>
 <title>品質表示タグはないと違法？義務づけられている4つの表示内容｜神戸バンブー代行</title>
