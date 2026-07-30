@@ -55,6 +55,7 @@
         { href: '/#voices',   label: 'お客様の声' },
         { href: '/#howto',    label: 'ご利用の流れ' },
         { href: '/#faq',      label: 'FAQ' },
+        { href: 'https://mctcompany.net/kakushuop/', label: '各種オプション', target: '_blank' },
         { href: '/company/',  label: '会社概要' },
       ]
     },
