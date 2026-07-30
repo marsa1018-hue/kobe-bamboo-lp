@@ -59,7 +59,13 @@
         { href: '/company/',  label: '会社概要' },
       ]
     },
-    { href: '/archives/421/', label: '初心者ガイド' },
+    {
+      label: '初心者ガイド',
+      children: [
+        { href: 'https://mctcompany.net/archives/421/',      label: '無在庫完全ガイド', target: '_blank' },
+        { href: 'https://mctcompany.net/archives/bamboomap/', label: '有料ノウハウ',    target: '_blank' },
+      ]
+    },
     { href: '/ichiran/',      label: 'ブログ' },
     { href: '#contact',       label: 'お問い合わせ' },
     { href: 'https://share.hsforms.com/1IXWWQMrUTYGnwg9T3xzplgrvgvr', label: '利用申込', cls: 'btn', target: '_blank' },
