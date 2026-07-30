@@ -4,12 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LE65QSJJ8H"></script>
 <script>
+  // GA4: 計測用スタブは即時定義（イベントは dataLayer に溜まる）。
+  // 重い gtag.js 本体は初回操作 or アイドル時まで遅延ロードして TBT を削減する。
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-LE65QSJJ8H');
+  (function(){
+    var loaded = false;
+    function loadGA(){
+      if (loaded) return; loaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-LE65QSJJ8H';
+      document.head.appendChild(s);
+    }
+    var evts = ['scroll','mousemove','touchstart','keydown','click'];
+    evts.forEach(function(e){ window.addEventListener(e, loadGA, {passive:true, once:true}); });
+    // 操作がなくてもアイドル後（最長5秒）には必ず読み込む
+    if ('requestIdleCallback' in window) requestIdleCallback(loadGA, {timeout:5000});
+    else setTimeout(loadGA, 4000);
+  })();
 </script>
 <title>各種オプション｜神戸バンブー代行</title>
 <meta name="description" content="神戸バンブー代行の各種オプション一覧（費用・内容・注意点）。あんしん検品の注意事項もご確認いただけます。">

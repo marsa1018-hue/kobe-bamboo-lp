@@ -4,12 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LE65QSJJ8H"></script>
 <script>
+  // GA4: 計測用スタブは即時定義（イベントは dataLayer に溜まる）。
+  // 重い gtag.js 本体は初回操作 or アイドル時まで遅延ロードして TBT を削減する。
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-LE65QSJJ8H');
+  (function(){
+    var loaded = false;
+    function loadGA(){
+      if (loaded) return; loaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-LE65QSJJ8H';
+      document.head.appendChild(s);
+    }
+    var evts = ['scroll','mousemove','touchstart','keydown','click'];
+    evts.forEach(function(e){ window.addEventListener(e, loadGA, {passive:true, once:true}); });
+    // 操作がなくてもアイドル後（最長5秒）には必ず読み込む
+    if ('requestIdleCallback' in window) requestIdleCallback(loadGA, {timeout:5000});
+    else setTimeout(loadGA, 4000);
+  })();
 </script>
 <title>システム機能 ── 仕込む・売れる・育てる｜神戸バンブー代行｜中国輸入 受注管理システム</title>
 <meta name="description" content="商品検索から値付け・出品・自動発注・発送通知・粗利管理・経理簡略化まで、神戸バンブー代行のシステムが全工程をシームレスに繋ぐ。業界初の仕入れ管理総合ツールの全機能を解説。">
