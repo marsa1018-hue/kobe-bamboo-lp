@@ -55,15 +55,15 @@
         { href: '/#voices',   label: 'お客様の声' },
         { href: '/#howto',    label: 'ご利用の流れ' },
         { href: '/#faq',      label: 'FAQ' },
-        { href: 'https://mctcompany.net/kakushuop/', label: '各種オプション', target: '_blank' },
+        { href: 'https://mctcompany.net/kakushuop/', label: '各種オプション' },
         { href: '/company/',  label: '会社概要' },
       ]
     },
     {
       label: '初心者ガイド',
       children: [
-        { href: 'https://mctcompany.net/archives/421/',      label: '無在庫完全ガイド', target: '_blank' },
-        { href: 'https://mctcompany.net/archives/bamboomap/', label: '有料ノウハウ',    target: '_blank' },
+        { href: 'https://mctcompany.net/archives/421/',      label: '無在庫完全ガイド' },
+        { href: 'https://mctcompany.net/archives/bamboomap/', label: '有料ノウハウ' },
       ]
     },
     { href: '/ichiran/',      label: 'ブログ' },
