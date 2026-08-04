@@ -444,6 +444,7 @@
   .bsub{font-size:11px;color:var(--mist);text-align:center;margin-bottom:6px;line-height:1.55}
   .pprice .was{display:block;font-family:var(--latin);font-size:21px;color:var(--mist);text-decoration:line-through;line-height:1;margin-bottom:3px}
   .pcamp{display:inline-block;margin-top:9px;font-size:11.5px;font-weight:800;color:#fff;background:var(--orange);padding:3px 11px;border-radius:999px;letter-spacing:.03em}
+  .pcamp-until{margin-left:6px;padding-left:6px;border-left:1px solid rgba(255,255,255,.55);font-size:10.5px;font-weight:700;letter-spacing:.02em}
   .phi{margin:18px 0 2px;padding:11px 14px;border-radius:10px;background:rgba(240,100,10,.1);border:1px solid rgba(240,100,10,.4);color:var(--ink);font-size:13px;font-weight:800;text-align:center;line-height:1.5}
 
   /* emphasize Business plan fee & shipping (weaken others) */
@@ -1178,7 +1179,7 @@
         <div class="pop-free"><span class="s">7日間</span><span class="b">無料</span></div>
         <div class="pname">スタンダードプラン</div>
         <div class="pprice"><span class="was">¥5,980</span>¥4,980<span class="unit">/月</span></div>
-        <span class="pcamp">今だけ ¥1,000 OFF</span>
+        <span class="pcamp">今だけ ¥1,000 OFF<small class="pcamp-until">8/31まで</small></span>
         <div class="pfee pfee2">
           <div class="fcell"><span class="l">代行手数料</span><span class="v">15元<small>/点</small></span></div>
           <div class="fcell"><span class="l">転送手数料</span><span class="v">8元<small>/点</small></span></div>
@@ -1819,5 +1820,24 @@
   })();
 </script>
 <script src="/nav.js"></script>
+<script>
+  /* キャンペーン自動終了：日本時間 2026-08-31 を過ぎたら通常価格(¥5,980)に戻す */
+  (function () {
+    var end = new Date('2026-09-01T00:00:00+09:00').getTime();
+    if (Date.now() < end) return; // キャンペーン期間中は何もしない
+    // スタンダードの価格カード
+    var card = document.querySelector('.pcard.featured');
+    if (card) {
+      var price = card.querySelector('.pprice');
+      if (price) price.innerHTML = '¥5,980<span class="unit">/月</span>';
+      var camp = card.querySelector('.pcamp');
+      if (camp) camp.style.display = 'none';
+    }
+    // 比較表のおすすめ列（¥4,980〜 → ¥5,980〜）
+    document.querySelectorAll('.pp').forEach(function (el) {
+      if (el.textContent.indexOf('4,980') !== -1) el.textContent = '¥5,980〜';
+    });
+  })();
+</script>
 </body>
 </html>
